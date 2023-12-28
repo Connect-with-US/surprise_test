@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
+const cors=require("cors")
 
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
+var corsOptions = { origin: 'http://localhost:3000', optionsSuccessStatus: 200 } 
+app.use(cors(corsOptions));
 //connecting to database
 require("./config/database").connect();
 
@@ -16,7 +19,7 @@ app.get('/',(req,res)=>{
 
     res.send("hello from server")
 })
-//actuivate
+
 app.listen(PORT, () => {
     console.log(`App is listening at ${PORT}`);
 })

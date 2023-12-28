@@ -9,22 +9,22 @@ const Navbar = (props) => {
     let setIsLoggedIn = props.setIsLoggedIn;
 
   return (
-    <div className='flex justify-evenly bg-slate-50 font-semibold'>
+    <div className='flex justify-evenly bg-slate-50 font-semibold py-[2px] items-center'>
 
         <Link to="/"> 
-            <img src={logo} alt="Logo" width={160} height={32} loading="lazy"/>
+            <img src={logo}  alt="Logo" width={160} height={32} loading="lazy"/>
         </Link>
 
         <nav >
-            <ul className='flex gap-3'>
+            <ul className='flex gap-4'>
                 <li>
-                    <Link to="/">HOME</Link>
+                    <Link  className=' hover:border-b-green-700 hover:border-b-4  ' to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link to="/">ABOUT</Link>
+                    <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/">ABOUT</Link>
                 </li>
                 <li>
-                    <Link to="/">CONTACT</Link>
+                    <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/">CONTACT</Link>
                 </li>
             </ul>
         </nav>
@@ -32,21 +32,21 @@ const Navbar = (props) => {
         {/* Login - SignUp - LogOut - Dashboard */}
         <div className='flex ml-5 mr-3 gap-3 '>
             { !isLoggedIn &&
-                <Link to="/login">
+                <Link to="/login" className=' hover:border-b-green-700 hover:border-b-4  '>
                     <button>
                         LOGIN
                     </button>
                 </Link>
             }
             { !isLoggedIn &&
-                <Link to="/signup">
+                <Link to="/signup" className=' hover:border-b-green-700 hover:border-b-4  '>
                     <button >
                         SIGN UP
                     </button>
                 </Link>
             }
             { isLoggedIn &&
-                <Link to="/">
+                <Link to="/" className=' hover:border-b-green-700 hover:border-b-4  '>
                     <button onClick={() => {
                         setIsLoggedIn(false);
                         toast.success("Logged Out");
@@ -56,7 +56,7 @@ const Navbar = (props) => {
                 </Link>
             }
             { isLoggedIn &&
-                <Link to="/dashboard">
+                <Link to="/dashboard" className=' hover:border-b-green-700 hover:border-b-4  '>
                     <button>
                         DASHBORD
                     </button>

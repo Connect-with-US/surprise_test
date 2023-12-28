@@ -1,4 +1,7 @@
 import React from 'react'
+import BorderStyle from '../components/common/BorderStyle';
+import Button from '../components/common/Button';
+
 
 const Qdata=[
     {question:"What is the name of your country",
@@ -55,7 +58,7 @@ const TestPage = () => {
                 <option value="orange">Orange</option>
             </select>
         </label></div>
-        <button className='text-white bg-black rounded py-1 mx-auto justify-center w-1/12 place-items-baseline animate-bounce'>GET</button>
+        <button   className='animate-bounce text-xl bg-black rounded-lg p-1 w-[6%] mx-auto text-white'>GET</button>
         </div>
         </form>
 
@@ -97,11 +100,9 @@ const TestPage = () => {
                 ))
             }
         </div>
-        <div className='flex justify-center text-white m-12'>
-            <button className='text-lg bg-black rounded-3xl p-2 w-1/6 mx-auto'>SUBMIT</button>
+        <Button/>
         </div>
-        </div>
-        <div className=" border-dashed w-11/12 mx-auto border-t-4 border-b-4 h-3 border-b-red-950 border-slate-400 hover:border-b-slate-400 hover:border-t-red-950 "/>
+        <BorderStyle/>
     </div>
   )
 }
