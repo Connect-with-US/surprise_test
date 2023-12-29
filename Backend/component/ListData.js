@@ -1,5 +1,4 @@
 
-
 const fs = require("fs");
 
 exports.Listdata = (req, res) => {
