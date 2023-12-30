@@ -25,11 +25,11 @@ const Qdata=[
 ]
 const TestPage = () => {
   return (
-    <div>
-      <div className='flex flex-col w-full h-96 bg-gradient-to-r from-gray-500 via-slate-700 to-gray-500 text-black text-center mt-0'>
-      <p className='text-white text-md mb-6 p-1  w-1/4 mx-auto'>SELECT THE OPTION GET YOUR QUESTION </p>
+    <div className='mr-1 ml-1'>
+      <div className='flex flex-col w-full h-[288px] bg-gradient-to-r from-gray-500 via-slate-700 to-gray-500 text-black text-center rounded-b-3xl mt-3'>
+      <p className='text-white text-sm mb-6 p-1  mx-auto font-semibold mt-1'>SELECT THE OPTION GET YOUR QUESTION </p>
         <form className='h-full' >
-        <div className='flex flex-col gap-y-40'>
+        <div className='flex flex-col gap-y-32'>
         <div className='grid grid-cols-3 w-1/2 mx-auto p-2  text-md font-semibold '>
         <label className='flex w-full justify-center gap-2'>
         <p className='text-white'>PICK FEILD</p>
@@ -58,12 +58,12 @@ const TestPage = () => {
                 <option value="orange">Orange</option>
             </select>
         </label></div>
-        <button   className='animate-bounce text-xl bg-black rounded-lg p-1 w-[6%] mx-auto text-white'>GET</button>
+        <button   className='text-md font-semibold hover:bg-neutral-50 bg-zinc-200 rounded-lg p-1 w-[6%] mx-auto text-black'>GET</button>
         </div>
         </form>
 
       </div>
-      <div className='text-white text-center text-lg font-medium bg-black'>
+      <div className='text-black text-center py-2 text-md font-semibold bg-zinc-200'>
         <p>YOUR QUESTION DISPLAY HERE AS SOON AS YOU CLICK ON BUTTON</p>
       </div>
       <div className='flex justify-center flex-col'>

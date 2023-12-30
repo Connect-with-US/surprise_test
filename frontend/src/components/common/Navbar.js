@@ -9,7 +9,7 @@ const Navbar = (props) => {
     let setIsLoggedIn = props.setIsLoggedIn;
 
   return (
-    <div className='flex justify-evenly bg-slate-50 font-semibold py-[2px] items-center'>
+    <div className='flex justify-evenly z-11 h-14 bg-neutral-50 border font-semibold py-[2px] items-center'>
 
         <Link to="/"> 
             <img src={logo}  alt="Logo" width={160} height={32} loading="lazy"/>
@@ -18,7 +18,7 @@ const Navbar = (props) => {
         <nav >
             <ul className='flex gap-4'>
                 <li>
-                    <Link  className=' hover:border-b-green-700 hover:border-b-4  ' to="/">HOME</Link>
+                    <Link  className=' hover:border-b-green-700 hover:border-b-4' to="/">HOME</Link>
                 </li>
                 <li>
                     <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/">ABOUT</Link>
