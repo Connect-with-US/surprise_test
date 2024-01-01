@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-hot-toast';
+import {  useNavigate } from 'react-router-dom';
+import { login } from '../service/Authitication/Auth';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 
-const LoginForm = ({setIsLoggedIn}) => {
+
+const LoginForm = () => {
 
     const navigate = useNavigate();
+    const dispatch=useDispatch();
 
     const [formData, setFormData] = useState( {
         email:"", password:""
@@ -27,12 +31,17 @@ const LoginForm = ({setIsLoggedIn}) => {
 
     function submitHandler(event) {
         event.preventDefault();
-        setIsLoggedIn(true);
-        toast.success("Logged In");
-        navigate("/dashboard");
+        dispatch(login(formData,navigate))
+        // ;(()=>{
+        //     login(formData,navigate)
+        // })()
+        
+        
     }
 
   return (
+  <div className='flex flex-col  items-center'>
+  <div>
     <form onSubmit={submitHandler} className='flex flex-col border-2 border-black p-2 py-4 w-96 items-center rounded text-black font-semibold text-[14px] '>
         <label>
             <p>
@@ -65,19 +74,25 @@ const LoginForm = ({setIsLoggedIn}) => {
                 {showPassword ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)}
             </span>
 
-            <Link to="#">
-                <p>
-                    Forgot Password
-                </p>
-            </Link>
+            
         </label>
-
-        <button className='text-lg bg-black rounded-3xl p-1 px-4 mx-auto text-white'>
-            Sign In
+        
+        <button className='text-sm font-semibold hover:bg-neutral-50 hover:shadow-xl bg-zinc-200 rounded-3xl p-1 px-4 mx-auto text-black'>
+            LOG IN 
         </button>
+        
+    </form></div>
+    <div className='flex flex-col  items-center'>
+                <div></div>
+                <p>OR</p>
+                <div className='text-zinc-500 text-[10px] font-normal m-2 '><p>if you dont have account</p></div>
+            </div>
 
-    </form>
+            <Link to={"/signup"} className='border bg-zinc-200 text-blck py-1 px-2 rounded hover:bg-neutral-50'>
+                <p>Sign Up</p>
+            </Link></div>
+            
   )
 }
 
-export default LoginForm
+export default LoginForm;

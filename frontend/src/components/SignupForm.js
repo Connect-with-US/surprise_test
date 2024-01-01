@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import {toast} from "react-hot-toast"
 import { useNavigate } from 'react-router-dom';
+import { signup } from '../service/Authitication/Auth';
+import { useDispatch } from 'react-redux';
 
-
-const SignupForm = ({setIsLoggedIn}) => {
+const SignupForm = () => {
     const navigate = useNavigate();
+    const dispatch=useDispatch();
 
     const [formData, setFormData] = useState({
-        firstName:"",
-        lastName:"",
+        name:"",
         email:"",
         password:"",
         confirmPassword:""
@@ -35,57 +36,34 @@ const SignupForm = ({setIsLoggedIn}) => {
             return ;
         }
 
-        setIsLoggedIn(true);
-        toast.success("Account Created");
+       
         const accountData = {
             ...formData
         };
-        console.log("printing account data ");
-        console.log(accountData);
-
-        navigate("/dashboard");
-
+        dispatch(signup(accountData,navigate))
+        
+      
     }
 
 
   return (
     <div>
-        {/* student-Instructor tab */}
-        {/* <div>
-            <button>
-                Student
-            </button>
-            <button>
-                Instructor
-            </button>
-        </div> */}
-
+        
         <form onSubmit={submitHandler} className='flex flex-col border-2 border-black p-2 py-6 w-96 items-center rounded text-black font-semibold text-[14px] '>
         {/* first name and lastName */}
             <div>
                     <label >
-                        <p>First Name<sup>*</sup></p>
+                        <p> Name<sup>*</sup></p>
                         <input className='text-black'
                             required
                             type="text"
-                            name="firstName"
+                            name="name"
                             onChange={changeHandler}
-                            placeholder="Enter First Name"
-                            value={formData.firstName}
+                            placeholder="Enter your Name"
+                            value={formData.name}
                         />
                     </label>
 
-                    <label>
-                        <p>Last Name<sup>*</sup></p>
-                        <input className='text-black'
-                            required
-                            type="text"
-                            name="lastName"
-                            onChange={changeHandler}
-                            placeholder="Enter Last Name"
-                            value={formData.lastName}
-                        />
-                    </label>
             </div>
             {/* email Add */}
             <label>
@@ -132,7 +110,7 @@ const SignupForm = ({setIsLoggedIn}) => {
                     </span>
                 </label>
             </div>
-        <button className='text-lg bg-black rounded-3xl p-2 px-3 mx-auto text-white'>
+        <button   className='text-lg bg-black rounded-3xl p-2 px-3 mx-auto text-white'>
             Create Account
         </button>
         </form>
