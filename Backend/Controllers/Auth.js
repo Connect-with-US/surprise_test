@@ -41,7 +41,7 @@ exports.signup = async (req,res) => {
         }
 
         //create entry for User
-        const user = await User.create({
+         await User.create({
             name,email,password:hashedPassword
         })
 

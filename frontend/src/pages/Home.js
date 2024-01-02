@@ -2,10 +2,21 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import LineStyle from '../components/common/LineStyle'
 import StripStyle from '../components/common/StripStyle'
-import TestData from '../components/TestData'
+import TestData from '../components/TestData';
+import { useSelector } from 'react-redux';
+import { toast } from 'react-hot-toast';
 
 const Home = () => {
   let navigate=useNavigate();
+  const token=useSelector(state=>state.auth.token)
+  const handler=()=>{
+    if(!token){
+      toast.success("you have to login first")
+      navigate("/login")
+    }else{
+      navigate("/testpage")
+    }
+  }
   
   return (
     <div className=' '>
@@ -13,7 +24,7 @@ const Home = () => {
         <LineStyle/>
         <div className='flex flex-col h-full justify-around'>
         <p className='text-white hover:text-purple-300 hover:border-b-[4px] hover:p-2 hover:rounded duration-500 cursor-pointer' > AI BASED TEST ASSESSMENT </p>
-        <button onClick={()=>(navigate('/testpage'))}  className='text-sm font-bold bg-zinc-300 rounded-3xl p-2 w-[35%] mx-auto text-black hover:bg-neutral-50'>TAKE TEST</button>
+        <button onClick={handler}  className='text-sm font-bold bg-zinc-300 rounded-3xl p-2 w-[35%] mx-auto text-black hover:bg-neutral-50'>TAKE TEST</button>
         <p className='w-full h-1 border-b border-dashed border-t '/>
         </div>
         <div className=' bg-stone-50 w-11/12 h-1/6 rounded-full bottom-6 hover:shadow-2xl' />
