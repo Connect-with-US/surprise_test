@@ -2,14 +2,14 @@ import React from 'react'
 import { useEffect,useState } from 'react'
 import { FiMoreVertical } from "react-icons/fi";
 import { apiConnector } from '../service/apisConnector';
-const BASE_URL="http://localhost:8000";
+const BASE_URL="http://localhost:8000/api/v1.1.2";
 const TestData = () => {
     const[data,setData]=useState([]);
 
     useEffect(()=>{
         (async()=>{
         // const response=await axios.get('https://jsonplaceholder.typicode.com/users')
-        const response=await apiConnector('GET',BASE_URL+'/api/v1/list/test')
+        const response=await apiConnector('GET',BASE_URL+'/list/test')
         setData(response.data)
         console.log(response.data);
         })()

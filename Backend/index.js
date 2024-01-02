@@ -16,7 +16,7 @@ require("./config/database").connect();
 
 //route import and mount
 const user = require("./routes/user");
-app.use("/api/v1", user);
+app.use("/api/v1.1.2", user);
 
 app.get('/',(req,res)=>{
 
