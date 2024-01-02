@@ -5,6 +5,9 @@ const cors=require("cors")
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+
 app.use(express.json());
 var corsOptions = { origin: 'http://localhost:3000', optionsSuccessStatus: 200 } 
 app.use(cors(corsOptions));
