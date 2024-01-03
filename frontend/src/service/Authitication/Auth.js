@@ -35,8 +35,11 @@
 
     }
     catch(err){
+        toast.success("something went wrong")
+        dispatch(setLoading(false))
         console.log(err);
         console.log(err.message);
+        navigate("/signup")
     }
  }
 }
@@ -63,15 +66,20 @@ export  function login(formData,navigate){
                 dispatch(setToken(resp.data.user.token))
                 dispatch(setLoading(false))
                 navigate("/")
-                localStorage.setItem("token",JSON.stringify(resp.data.user.token))
+                // localStorage.setItem("token",JSON.stringify(resp.data.user.token))
+                sessionStorage.setItem("token",JSON.stringify(resp.data.user.token))
                 Cookies.set()
 
             }
 
         }
         catch(err){
-            console.log(err)
-            console.log(err.message)
+        toast.success("something went wrong")
+        dispatch(setLoading(false))
+        console.log(err);
+        console.log(err.message);
+        toast.success("login again..")
+        navigate("/login")
         }
 
     }
