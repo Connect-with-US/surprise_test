@@ -1,25 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LineStyle from '../components/common/LineStyle'
 import StripStyle from '../components/common/StripStyle'
 import TestData from '../components/TestData';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-hot-toast';
+import { setPopStyle } from '../central/slices/authslice';
+import PopUploginForm from '../components/common/PopUploginForm';
 
 const Home = () => {
   let navigate=useNavigate();
+  const dispatch=useDispatch();
+  
   const token=useSelector(state=>state.auth.token)
+  const pop_up=useSelector(state=>state.auth.pop_up)
   const handler=()=>{
     if(!token){
       toast.success("you have to login first")
-      navigate("/login")
+     dispatch(setPopStyle(true))
     }else{
+      
       navigate("/testpage")
     }
   }
   
   return (
-    <div className=' '>
+    <div className=' relative'>
+    {
+      pop_up? (<PopUploginForm/>):(<></>)
+    }
       <div className='grid grid-cols-3   w-full h-[288px] mt-3 bg-gradient-to-r from-gray-500 via-slate-700 to-gray-500 rounded-b-3xl ml-1 mr-1  text-center text-white justify-center place-items-center text-3xl gap-x-8'>
         <LineStyle/>
         <div className='flex flex-col h-full justify-around'>

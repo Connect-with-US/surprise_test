@@ -3,12 +3,8 @@ import frameImage from "../assets/frame.png"
 import SignupForm from './SignupForm'
 import LoginForm from './LoginForm'
 import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { setSignupData } from '../central/slices/authslice';
 
 const Template = ({title, desc1, desc2, image,formtype}) => {
-const dispatch=useDispatch();
-
 
 const loading=useSelector(state=>state.auth.loading)
 console.log("this is redux data ",loading)
