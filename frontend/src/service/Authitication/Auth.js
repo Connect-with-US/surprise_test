@@ -28,18 +28,17 @@
         if(resp){
             toast.success("Account created sucessfully")
             dispatch(setLoading(false))
-            toast.success("account has created")
+            toast.success("account has been created")
             navigate("/login")
         }
         
 
     }
     catch(err){
-        toast.success("something went wrong")
-        dispatch(setLoading(false))
-        console.log(err);
-        console.log(err.message);
-        navigate("/signup")
+        toast.error(err.response ? err.response.data.message : 'Something went wrong');
+        dispatch(setLoading(false));
+        console.error(err);
+        navigate('/signup');
     }
  }
 }

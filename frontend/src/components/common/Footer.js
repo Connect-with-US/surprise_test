@@ -6,11 +6,11 @@ const Footer = () => {
     <div className='m-24 '>
     <div className='flex justify-end  to-90%  h-96 w-full mx-auto border-t-4 border-l-4 rounded-3xl border-teal-400'>
     
-        <div className='  h-80 w-full  border-r-4 border-b-4 rounded-2xl border-red-200 bg-gradient-to-r from-gray-500 via-slate-700 to-gray-500  '
+        <div className='  h-80 w-full  border-r-4 border-b-4 rounded-2xl border-red-200 bg-violet-100  '
         >
         <div className='  h-96 w-full  border-b-4 rounded-3xl border-red-700  '
         >
-        <div className='  text-white  h-2  w-11/12 mx-auto  border-t-4 rounded-3xl border-amber-950  '
+        <div className='  text-black  h-2  w-11/12 mx-auto  border-t-4 rounded-3xl border-amber-950  '
         >
         <div className='grid grid-cols-3 items-center w-9/12 mt-12 justify-items-center'>
         <div className=' '>

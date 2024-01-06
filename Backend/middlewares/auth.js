@@ -47,7 +47,7 @@ exports.signEamilVerify=(req,res,next)=>{
           } else {
             
             res.status(400).json({
-                message:"this does not valid gmail",
+                message:"Enter a valid email",
                 success:false,
 
                 });
@@ -55,7 +55,7 @@ exports.signEamilVerify=(req,res,next)=>{
 
     }catch(err){
         res.status(500).json({
-            message:"this eamil did not exit",
+            message:"this eamil did not exist",
             success:false,
             message2:"user did not created try with valid email",
             err:err.message
@@ -76,7 +76,7 @@ exports.verifyPassword=(req,res,next)=>{
             next();
           } else {
             res.status(500).json({
-                message:"password did not contain all 8 char",
+                message:"password did not contain all 8 characters including capital,small,numercial,special characters",
                 success:false,
             })
           }
@@ -84,7 +84,7 @@ exports.verifyPassword=(req,res,next)=>{
     }
     catch(err){
         res.status(500).json({
-            message:"password did not contain all 8 char",
+            message:"password did not contain all 8 characters",
             success:false,
         })
     }

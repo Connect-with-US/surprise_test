@@ -7,6 +7,7 @@ import Signup from "./pages/Signup"
 import {  useState } from 'react'
 import Footer from "./components/common/Footer";
 import TestPage from "./pages/TestPage";
+import About from "./pages/About";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
 
         <Route path="/" element= {<Home/>} />
+        <Route path="/about" element= {<About/>} />
         <Route path="/login" element = {<Login  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/testpage" element = {<TestPage/>} />
