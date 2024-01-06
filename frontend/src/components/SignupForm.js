@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 const SignupForm = () => {
     const navigate = useNavigate();
     const dispatch=useDispatch();
+    const styleId='  rounded-lg h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-1';
 
     const [formData, setFormData] = useState({
         name:"",
@@ -49,12 +50,12 @@ const SignupForm = () => {
   return (
     <div>
         
-        <form onSubmit={submitHandler} className='flex flex-col border-2 border-black p-2 py-6 w-96 items-center rounded text-black font-semibold text-[14px] '>
+        <form onSubmit={submitHandler} className='flex flex-col border-[1px] border-black p-2 py-6 w-96 items-center rounded text-black font-semibold text-[14px] gap-y-2 '>
         {/* first name and lastName */}
             <div>
                     <label >
                         <p> Name<sup>*</sup></p>
-                        <input className='text-black'
+                        <input className={`${styleId}`}
                             required
                             type="text"
                             name="name"
@@ -68,7 +69,7 @@ const SignupForm = () => {
             {/* email Add */}
             <label>
                     <p>Email Address<sup>*</sup></p>
-                    <input className='text-black'
+                    <input className={`${styleId}`}
                         required
                         type="email"
                         name="email"
@@ -79,38 +80,50 @@ const SignupForm = () => {
             </label>
 
             {/* createPassword and Confirm Password */}
-            <div>
+            <div className='flex flex-col gap-y-2'>
                 <label>
                     <p>Create Password<sup>*</sup></p>
-                    <input className='text-black'
-                        required
-                        type= {showPassword ? ("text") : ("password")}
-                        name="password"
-                        onChange={changeHandler}
-                        placeholder="Enter Password"
-                        value={formData.password}
-                    />
-                    <span onClick={() => setShowPassword((prev) => !prev)}>
-                        {showPassword ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)}
-                    </span>
+                    <div className='flex items-center w-full relative '>
+                        <div>
+                            <input className={`${styleId}`}
+                                required
+                                type= {showPassword ? ("text") : ("password")}
+                                name="password"
+                                onChange={changeHandler}
+                                placeholder="Enter Password"
+                                value={formData.password}
+                            />
+                        </div>
+                        <div className='flex items-center absolute right-4 '>
+                            <span onClick={() => setShowPassword((prev) => !prev)}>
+                                {showPassword ? (<AiOutlineEyeInvisible size={15}/>) : (<AiOutlineEye size={15}/>)}
+                            </span>
+                        </div>
+                    </div>
                 </label>
 
-                <label className=' flex flex-col   '>
+                <label >
                     <p>Confirm Password<sup>*</sup></p>
-                    <input className='text-black rounded p-1 border-none hover:border-none default:border-none '
-                        required
-                        type= {showPassword ? ("text") : ("password")}
-                        name="confirmPassword"
-                        onChange={changeHandler}
-                        placeholder="Confirm Password"
-                        value={formData.confirmPassword}
-                    />
-                    <span onClick={() => setShowPassword((prev) => !prev)} className='   text-black place-items-end'>
-                        {showPassword ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)}
-                    </span>
+                    <div  className='flex items-center w-full relative '>
+                        <div>
+                        <input className={`${styleId}`}
+                            required
+                            type= {showPassword ? ("text") : ("password")}
+                            name="confirmPassword"
+                            onChange={changeHandler}
+                            placeholder="Confirm Password"
+                            value={formData.confirmPassword}
+                        />
+                        </div>
+                        <div className='flex items-center absolute right-4 '>
+                        <span onClick={() => setShowPassword((prev) => !prev)} className='   text-black place-items-end'>
+                            {showPassword ? (<AiOutlineEyeInvisible size={15}/>) : (<AiOutlineEye size={15}/>)}
+                        </span>
+                        </div>
+                    </div>
                 </label>
             </div>
-        <button   className='text-lg bg-black rounded-3xl p-2 px-3 mx-auto text-white'>
+        <button   className='border bg-zinc-200 p-2 px-3 rounded-lg hover:bg-neutral-50 m-2'>
             Create Account
         </button>
         </form>
