@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialSate={
+    pop_up:false,
     signupData:null,
     loading:false,
     // token:localStorage.getItem("token")? JSON.parse(localStorage.getItem("token")):null,
@@ -19,10 +20,13 @@ const authSlice=createSlice({
         },
         setLoading(state,value){
             state.loading=value.payload
+        },
+        setPopStyle(state,value){
+            state.pop_up=value.payload
         }
 
     }
 })
 
-export const{setLoading,setSignupData,setToken}=authSlice.actions
+export const{setLoading,setSignupData,setToken,setPopStyle}=authSlice.actions
 export default authSlice.reducer

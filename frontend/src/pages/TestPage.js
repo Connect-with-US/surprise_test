@@ -1,6 +1,7 @@
 import React from 'react'
 import BorderStyle from '../components/common/BorderStyle';
 import Button from '../components/common/Button';
+import AiquestionsFormateStyle from '../components/AIQuestion/AiquestionsFormateStyle';
 
 
 const Qdata=[
@@ -25,45 +26,11 @@ const Qdata=[
 ]
 const TestPage = () => {
   return (
-    <div className='mr-1 ml-1'>
-      <div className='flex flex-col w-full h-[288px] bg-gradient-to-r from-gray-500 via-slate-700 to-gray-500 text-black text-center rounded-b-3xl mt-3'>
-      <p className='text-white text-sm mb-6 p-1  mx-auto font-semibold mt-1'>SELECT THE OPTION GET YOUR QUESTION </p>
-        <form className='h-full' >
-        <div className='flex flex-col gap-y-32'>
-        <div className='grid grid-cols-3 w-1/2 mx-auto p-2  text-md font-semibold '>
-        <label className='flex w-full justify-center gap-2'>
-        <p className='text-white'>PICK FEILD</p>
-            <select name="selectedFruit" className='rounded'>
-                <option value="apple">Apple</option>
-                <option value="banana">Banana</option>
-                <option value="orange">Orange</option>
-                <option value="apple">Apple</option>
-                <option value="banana">Banana</option>
-                <option value="orange">Orange</option>
-            </select>
-        </label>
-        <label className='flex w-full justify-center gap-2'>
-        <p className='text-white'>PICK TOPIC</p>
-            <select name="selectedFruit" className='rounded'>
-                <option value="apple">Apple</option>
-                <option value="banana">Banana</option>
-                <option value="orange">Orange</option>
-            </select>
-        </label>
-        <label className='flex w-full justify-center gap-2'>
-        <p className='text-white'>PICK SUBTOPIC</p>
-            <select name="selectedFruit" className='rounded'>
-                <option value="apple">Apple</option>
-                <option value="banana">Banana</option>
-                <option value="orange">Orange</option>
-            </select>
-        </label></div>
-        <button   className='text-md font-semibold hover:bg-neutral-50 bg-zinc-200 rounded-lg p-1 w-[6%] mx-auto text-black'>GET</button>
-        </div>
-        </form>
-
-      </div>
-      <div className='text-black text-center py-2 text-md font-semibold bg-zinc-200'>
+    <div className='mr-1 ml-1 relative h-screen'>
+      <div className='flex flex-col  w-full mb-6 h-[288px] bg-gradient-to-r from-gray-500 via-slate-700 to-gray-500 text-black text-center rounded-b-3xl mt-3'/>
+      
+      <AiquestionsFormateStyle />
+      {/* <div className='text-black text-center py-2 text-md font-semibold bg-zinc-200'>
         <p>YOUR QUESTION DISPLAY HERE AS SOON AS YOU CLICK ON BUTTON</p>
       </div>
       <div className='flex justify-center flex-col'>
@@ -101,8 +68,8 @@ const TestPage = () => {
             }
         </div>
         <Button/>
-        </div>
-        <BorderStyle/>
+        </div> */}
+        
     </div>
   )
 }

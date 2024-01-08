@@ -5,6 +5,7 @@
   import { setSignupData } from "../../central/slices/authslice";
   import { setToken } from "../../central/slices/authslice";
   import Cookies from "js-cookie"
+  import { setPopStyle } from "../../central/slices/authslice";
 
  
 
@@ -61,6 +62,7 @@ export  function login(formData,navigate){
             console.log("when login this data is found",resp.data.user.token)
             if(resp){
                 toast.success("Loged In...")
+                dispatch(setPopStyle(false))
                 dispatch(setSignupData(resp.data))
                 dispatch(setToken(resp.data.user.token))
                 dispatch(setLoading(false))
