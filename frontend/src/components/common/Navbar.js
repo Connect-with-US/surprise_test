@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/Logo.svg"
+import logo from "../../assets/QuizFuse-removebg.png"
 import {Link} from "react-router-dom"
 import {toast} from "react-hot-toast"
 import { FiLogIn } from "react-icons/fi";
@@ -14,22 +14,22 @@ const Navbar = () => {
    
 
   return (
-    <div className='flex justify-evenly z-11 h-14 bg-neutral-50 border font-semibold py-[2px] items-center'>
+    <div className='flex justify-evenly z-11 h-14 bg-yellow-51 border font-semibold py-[2px] items-center'>
 
         <Link to="/"> 
-            <img src={logo}  alt="Logo" width={160} height={32} loading="lazy"/>
+            <img src={logo}  alt="Logo" width={95} height={18} loading="lazy"/>
         </Link>
 
         <nav >
             <ul className='flex gap-4'>
                 <li>
-                    <Link  className=' hover:border-b-green-700 hover:border-b-4' to="/">HOME</Link>
+                    <Link  className=' hover:border-b-orange-700 hover:border-b-4' to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/about">ABOUT</Link>
+                    <Link className=' hover:border-b-orange-700 hover:border-b-4  ' to="/about">ABOUT</Link>
                 </li>
                 <li>
-                    <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/">CONTACT</Link>
+                    <Link className=' hover:border-b-orange-700 hover:border-b-4  ' to="/">CONTACT</Link>
                 </li>
             </ul>
         </nav>

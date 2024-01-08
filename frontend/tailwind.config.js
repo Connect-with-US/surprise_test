@@ -24,12 +24,17 @@ module.exports = {
         blue: {
           100: "#47A5C5",
           101:"#e0f1f4",
+          102:"#302055",
         },
         pink: {
           200: "#EF476F",
         },
+        BGgradient: {
+          201: "bg-gradient-to-t from-orange-400 to-sky-400",
+        },
         yellow: {
           50: "#FFD60A",
+          51:"#F7E7CE",
         },
       },
     },
