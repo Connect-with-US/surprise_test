@@ -26,7 +26,7 @@ const Navbar = () => {
                     <Link  className=' hover:border-b-green-700 hover:border-b-4' to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/">ABOUT</Link>
+                    <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/about">ABOUT</Link>
                 </li>
                 <li>
                     <Link className=' hover:border-b-green-700 hover:border-b-4  ' to="/">CONTACT</Link>
