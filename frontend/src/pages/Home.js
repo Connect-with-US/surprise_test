@@ -26,8 +26,9 @@ const Home = () => {
       navigate("/testpage")
     }
   }
-  
+
   return (
+
     <div className='' >
     {
       pop_up? (<PopUploginForm/>):(<></>)
@@ -40,6 +41,10 @@ const Home = () => {
         <button onClick={handler}  className='text-sm font-bold bg-zinc-300 rounded-3xl p-2 w-[35%] mx-auto text-black hover:bg-neutral-50'>TAKE TEST</button>
         </div>
         
+
+
+    
+
       </div>
       <StripStyle value={"TEST YOUR SKILL"}/>
       <div className='flex'>
