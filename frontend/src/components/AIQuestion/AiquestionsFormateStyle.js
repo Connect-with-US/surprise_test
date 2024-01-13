@@ -1,10 +1,35 @@
 import React, { useState } from 'react'
-
+import { useDispatch} from 'react-redux';
+import { OpenAi } from '../../service/Ai/OpenAi';
+import { useNavigate } from 'react-router-dom';
 const AiquestionsFormateStyle = () => {
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
+    const num=2
     const[qdata,setqdata]=useState(false);
+    const [formData,setFormData]=useState({
+      message:""
+    })
+    function changeHandler(event){
+      setFormData((prevData)=>(
+        {...prevData,
+        [event.target.name]:event.target.value}
+      ))
+    }
+    const submitHandler=async(event)=>{
+      event.preventDefault();
+      // console.log("this is form test pages",formData.message)
+      dispatch(OpenAi(formData,num,navigate))
+      
+
+    }
+    
+    
+   
+
 
   return (
-    <div className=' w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center absolute top-20 left-0 right-0'>
+    <div className=' w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center   top-20 left-0 right-0'>
       <div>
         <h1 className='text-3xl font-bold m-1'>Generate Question Papers in minutes</h1>
         <h3 className='text-xl font-semibold m-1'>Most Advanced Test Generator</h3>
@@ -23,7 +48,7 @@ const AiquestionsFormateStyle = () => {
             <button onClick={()=> setqdata( !qdata)}>upload PDF</button>
             <button>PreAisearch</button>
         </div>
-        <form>
+        <form onSubmit={submitHandler}>
             <div className='flex  justify-center items-center border-[2px] p-2 rounded min-h-48 border-neutral-50'>
                 {qdata ? (<input type='file'name="foo"  accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" 
                 className="text-sm text-stone-500
@@ -32,7 +57,7 @@ const AiquestionsFormateStyle = () => {
                         file:bg-stone-50 file:text-stone-700
                         hover:file:cursor-pointer hover:file:bg-blue-50
                         hover:file:text-blue-700"/>)
-                :(<textarea type='text' placeholder='enter your text' className='w-full min-h-44  bg-zinc-100 justify-start px-2 focus:outline-none
+                :(<textarea type='text' name="message" value={formData.value} onChange={changeHandler} placeholder='enter your text' className='w-full min-h-44  bg-zinc-100 justify-start px-2 focus:outline-none
                 focus:ring-0  focus:border-gray-300 border-2 border-solid rounded-[8px] text-justify'/>)
                 }
             </div>

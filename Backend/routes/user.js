@@ -11,7 +11,7 @@ router.post("/login", login);
 router.post("/signup",signEamilVerify,verifyPassword, signup);
 router.get("/list/test",Listdata);
 router.post("/ai",googleAi)
-// router.get("/openai",OpenAi)
+router.post("/openai",OpenAi) 
 
 
 module.exports = router;

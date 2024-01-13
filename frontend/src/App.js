@@ -7,8 +7,8 @@ import Signup from "./pages/Signup"
 import {  useState } from 'react'
 import Footer from "./components/common/Footer";
 import TestPage from "./pages/TestPage";
-
-
+import QuestionsStyle from "./components/AIQuestion/QuestionsStyle";
+import DownloadFormate from "./components/download/DownloadFormate";
 function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -17,8 +17,8 @@ function App() {
   
 
   return (
-    <div>
-      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+    <div className=" relative">
+      <Navbar />
 
       <Routes>
 
@@ -26,6 +26,8 @@ function App() {
         <Route path="/login" element = {<Login  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/testpage" element = {<TestPage/>} />
+        <Route path="/questions" element = {<QuestionsStyle/>} />
+        <Route path="/downloadformate" element = {<DownloadFormate/>} />
 
       </Routes>
       <Footer/>
