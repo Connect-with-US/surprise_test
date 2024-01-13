@@ -24,19 +24,15 @@ const AiquestionsFormateStyle = () => {
 
     }
     
-    
-   
-
-
   return (
-    <div className=' w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center   top-20 left-0 right-0'>
+    <div className=' w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center   '>
       <div>
         <h1 className='text-3xl font-bold m-1'>Generate Question Papers in minutes</h1>
         <h3 className='text-xl font-semibold m-1'>Most Advanced Test Generator</h3>
       </div>
       <div className='flex flex-col w-full gap-y-4 mx-auto min-h-96 border bg-zinc-200 p-4 rounded'>
         <label className='w-full text-start text-xl '>
-            <p> Enter A Title For Question Paper<sup>*</sup></p>
+            <p> Enter A Title For Question Paper</p>
             <input className='w-full rounded h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-2'
                 name='title'
                 placeholder='enter your question title'
