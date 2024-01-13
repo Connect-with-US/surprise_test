@@ -15,11 +15,12 @@ const TestData = () => {
       },[])
 
   return (
-    <div className='grid grid-cols-2 gap-4 w-[80%] mx-auto mb-1 mt-6'>
+    <div className='grid grid-cols-2 gap-4 w-[83%] mx-auto mb-1 mt-6'>
         {
           data?
           ( data.map((item,index)=>(
-            <div key={index} className='grid  bg-neutral-50 shadow-md hover:shadow-2xl border-2 z-11 text-neutral-700   p-4 px-6 rounded-lg min-h-44 gap-y-[20px] mb-10'>
+            <div key={index} className={`grid  bg-neutral-50 shadow-md hover:shadow-2xl border-l-[2px]  z-11 text-neutral-700   p-4 px-6 rounded-lg min-h-44 gap-y-[20px] mb-10
+            ${index%3===0 ? ('border-green-600'):('border-indigo-950')}`}>
             <div className='flex  justify-between items-center text-sm gap-x-3 border-l-4  border-green-800 rounded-sm'>
             <div className='flex gap-x-4 font-semibold items-center '>
               <button className='border px-2 py-1 rounded text-green-950'>{item.status?(item.status):("SETUP IN PROCESS")} </button>

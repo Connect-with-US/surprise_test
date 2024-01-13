@@ -35,7 +35,7 @@ const DeveloperListData=[
 const DeveloperList = () => {
     const iconStyle='  fill-zinc-600 hover:fill-teal-600 hover:scale-125 duration-200 hover:shadow-2xl hover:bg-zinc-200 rounded ';
   return (
-    <div className='flex flex-col w-[10%] h-auto  border justify-start items-center mt-6 mb-12 rounded-lg ml-8 mr-4 text-slate-600'>
+    <div className='flex flex-col w-[10%] h-auto  border justify-start items-center mt-6 mb-12 rounded-lg ml-8 mr-4 text-slate-600 shadow-md'>
         <h1  className='w-[95%] p-1 mt-1 mb-4 cursor-pointer font-bold text-center bg-zinc-100 rounded-md ' >DEVELOPERS</h1>
         <div>
         {

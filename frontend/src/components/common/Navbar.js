@@ -1,9 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
 import logo from "../../assets/logo.png"
-=======
-import logo from "../../assets/QuizFuse-removebg.png"
->>>>>>> 8e575e5540a2200064946f503a4dde1ae604392f
+
 import {Link} from "react-router-dom"
 import { FiLogIn } from "react-icons/fi";
 import { useSelector } from 'react-redux';
@@ -16,7 +13,7 @@ const navbar=[
     },
     {
         title:"ABOUT",
-        path:'/'
+        path:'/about'
     },
     {
         title:"CONTACT",
@@ -30,33 +27,18 @@ const Navbar = () => {
     console.log("from navbar auth data",authdata)
     
   return (
-<<<<<<< HEAD
-    <div className='flex justify-center gap-x-24 z-11 h-16 w-[50%] mx-auto rounded-full bg-neutral-50 border font-semibold py-[2px] items-center  fixed  left-0 right-0 top-4 text-gray-500'>
+
+    <div className='flex justify-center gap-x-24 z-11 h-16 w-[50%] mx-auto rounded-full bg-neutral-50 border font-semibold py-[2px] items-center  fixed  left-0 right-0 top-3 text-gray-500'>
         <Link to="/"> 
             <img src={logo}  alt="Logo" width={100} height={10} loading="lazy" className='p-2'/>
-=======
-    <div className='flex justify-evenly z-11 h-14 bg-yellow-51 border font-semibold py-[2px] items-center'>
 
-        <Link to="/"> 
-            <img src={logo}  alt="Logo" width={95} height={18} loading="lazy"/>
->>>>>>> 8e575e5540a2200064946f503a4dde1ae604392f
         </Link>
         <nav >
             <ul className='flex gap-4'>
             {
                 navbar.map((item,index)=>(
-                <li>
-<<<<<<< HEAD
+                <li key={index}>
                    <Link  className={`${tailwind}`} to={`${item.path}`}> {item.title}</Link>
-=======
-                    <Link  className=' hover:border-b-orange-700 hover:border-b-4' to="/">HOME</Link>
-                </li>
-                <li>
-                    <Link className=' hover:border-b-orange-700 hover:border-b-4  ' to="/about">ABOUT</Link>
-                </li>
-                <li>
-                    <Link className=' hover:border-b-orange-700 hover:border-b-4  ' to="/">CONTACT</Link>
->>>>>>> 8e575e5540a2200064946f503a4dde1ae604392f
                 </li>
                 ))
             }
