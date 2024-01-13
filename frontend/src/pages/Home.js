@@ -7,6 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-hot-toast';
 import { setPopStyle } from '../central/slices/authslice';
 import PopUploginForm from '../components/common/PopUploginForm';
+import DeveloperList from '../components/common/DeveloperList';
+import roshan from "../assets/roshan.jpg"
+import DownloadFile from "../components/download/DownloadFile"
 
 const Home = () => {
   let navigate=useNavigate();
@@ -26,24 +29,33 @@ const Home = () => {
 
   return (
 
-    <div className=' bg-gradient-to-t from-orange-400 to-sky-400'>
-      <div className='w-full h-[288px] mt-0.4.2  bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-red-900 via-violet-200 to-orange-500 rounded-b-3xl ml-1 mr-1  text-center text-black justify-center place-items-center text-3xl p-12 border'>
-        {/* <LineStyle/> */}
-        <div className='flex flex-col gap-y-9 place-items-center h-full w-full'>
-        <p className='text-black hover:text-b hover:border-b-[4px] hover:p-2 hover:rounded duration-500 cursor-pointer' > AI BASED MOCK TEST </p>
-        <button onClick={handler}  className='text-sm font-bold bg-yellow-51 rounded-3xl p-2 w-[35%] mx-auto text-black hover:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800'>TAKE TEST</button>
-
-
-
-        <p className='w-full h-1 border-b border-dashed border-t '/>
+    <div className='' >
+    {
+      pop_up? (<PopUploginForm/>):(<></>)
+    }
+      <div className='grid place-content-center w-full h-96 mt-2 bg-gradient-to-r from-gray-800 via-indigo-950 to-gray-800 text-black rounded-b-[30px] rounded-xl py-4   '
+       >
+        
+        <div className='flex flex-col h-full gap-8 mt-24 '>
+        <p className='text-white font-bold text-[40px]   cursor-pointer' > AI POWERED QUESTIONS GENERATOR </p>
+        <button onClick={handler}  className='text-sm font-bold bg-zinc-300 rounded-3xl p-2 w-[35%] mx-auto text-black hover:bg-neutral-50'>TAKE TEST</button>
         </div>
-        {/* <div className=' bg-stone-50 w-11/12 h-1/6 rounded-full bottom-6 hover:shadow-2xl' /> */}
+        
+
+
+    
+
       </div>
       <StripStyle value={"TEST YOUR SKILL"}/>
-      
-      <TestData/>
+      <div className='flex'>
+      <DeveloperList/>
+      <TestData/>    
+      </div>
       <StripStyle value1={"b-full"}/>
-       
+      <div className='text-3xl font-bold text-black text-center'>
+        {/* <a href={hello} download='hello' target='pdf'>download</a> */}
+        {/* <DownloadFile/> */}
+      </div>
     </div>
   )
 }

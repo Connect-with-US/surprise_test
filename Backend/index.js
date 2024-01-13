@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 app.use(express.json());
-var corsOptions = { origin: 'http://localhost:3000', optionsSuccessStatus: 200 } 
+var corsOptions = { origin: '*', optionsSuccessStatus: 200 } 
 app.use(cors(corsOptions));
 //connecting to database
 require("./config/database").connect();

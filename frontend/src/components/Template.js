@@ -33,7 +33,7 @@ console.log("this is redux data ",loading)
                 width={558}
                 height={504}
                 loading="lazy"
-                className='z-0 absolute rounded-3xl w-full object-fill '
+                className='z-0 absolute overflow-hidden rounded-3xl w-full object-fill '
                 />
 
             <img src={image}
@@ -41,7 +41,7 @@ console.log("this is redux data ",loading)
                 width={558}
                 height={490}
                 loading="lazy"
-                    className='z-10 absolute rounded-3xl w-full object-fill'
+                    className='z-10 absolute overflow-hidden rounded-3xl w-full object-fill'
                 />    
         </div>
 

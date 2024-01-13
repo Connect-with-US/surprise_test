@@ -8,7 +8,6 @@ const TestData = () => {
 
     useEffect(()=>{
         (async()=>{
-        // const response=await axios.get('https://jsonplaceholder.typicode.com/users')
         const response=await apiConnector('GET',BASE_URL+'/list/test')
         setData(response.data)
         console.log(response.data);
@@ -20,7 +19,7 @@ const TestData = () => {
         {
           data?
           ( data.map((item,index)=>(
-            <div key={index} className='grid  bg-yellow-51 shadow-md hover:shadow-2xl border-2 z-11 text-neutral-700   p-4 px-6 rounded-lg min-h-44 gap-y-[20px] mb-10'>
+            <div key={index} className='grid  bg-neutral-50 shadow-md hover:shadow-2xl border-2 z-11 text-neutral-700   p-4 px-6 rounded-lg min-h-44 gap-y-[20px] mb-10'>
             <div className='flex  justify-between items-center text-sm gap-x-3 border-l-4  border-green-800 rounded-sm'>
             <div className='flex gap-x-4 font-semibold items-center '>
               <button className='border px-2 py-1 rounded text-green-950'>{item.status?(item.status):("SETUP IN PROCESS")} </button>
