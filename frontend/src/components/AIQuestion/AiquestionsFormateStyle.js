@@ -23,6 +23,10 @@ const AiquestionsFormateStyle = () => {
       
 
     }
+    const clickHandler=()=>
+    {
+      navigate('/downloadformate')
+    }
     
   return (
     <div className=' w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center   '>
@@ -57,7 +61,9 @@ const AiquestionsFormateStyle = () => {
                 focus:ring-0  focus:border-gray-300 border-2 border-solid rounded-[8px] text-justify'/>)
                 }
             </div>
+            <div className=' flex gap-2'>
             <button className='w-full p-3 text-center font-semibold  text-black rounded  bg-emerald-400 hover:border-emerald-400 hover:border-[1px] hover:bg-neutral-50 duration-200'>Generates Questions</button>
+            <button className='w-full p-3 text-center font-semibold  text-black rounded  bg-emerald-400 hover:border-emerald-400 hover:border-[1px] hover:bg-neutral-50 duration-200' onClick={clickHandler}>Download Question</button></div>
         </form>
       </div>
       
