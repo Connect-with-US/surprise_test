@@ -10,6 +10,7 @@ import TestPage from "./pages/TestPage";
 import QuestionsStyle from "./components/AIQuestion/QuestionsStyle";
 import DownloadFormate from "./components/download/DownloadFormate";
 import About from "./pages/About";
+import DownloadFile from "./components/download/DownloadFile";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/testpage" element = {<TestPage/>} />
         <Route path="/questions" element = {<QuestionsStyle/>} />
         <Route path="/downloadformate" element = {<DownloadFormate/>} />
+        <Route path="/download" element = {<DownloadFile/>} />
 
       </Routes>
       <Footer/>

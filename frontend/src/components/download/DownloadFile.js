@@ -1,11 +1,14 @@
 import React, { useRef } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import DoubleCol from "./formate_style/DoubleCol"
+import DoubleCol from './formates/DoubleCol';
 
-const DownloadFile = () => {
+import { useEffect } from 'react';
+
+const DownloadFile = ({index}) => {
   const componentRef = useRef(null);
-
+  
+  
   const generatePdf = async () => {
     
     const pdf = new jsPDF('p','mm','a4');
@@ -20,15 +23,17 @@ const DownloadFile = () => {
 
     pdf.save('my-pdf.pdf');
   };
-
+  useEffect(()=>{
+    generatePdf();
+  },[])
   
   return (
     <div>
     <div className=' text-center' ref={componentRef}>
-    <DoubleCol/>
-    <p className='text-center text-3xl text-black mx-auto p-6 w-[50%] ' >this is me from download component</p>
+    
+    <p className='text-center text-3xl text-black mx-auto p-6 w-[50%]'>this is me from download component</p>
     </div>
-    <button onClick={generatePdf}>DOWNLOAD</button>
+    <button onClick={generatePdf}></button>
     </div>
   );
 

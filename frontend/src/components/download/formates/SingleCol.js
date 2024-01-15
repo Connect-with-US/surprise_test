@@ -1,6 +1,6 @@
 import React from 'react'
 
-const singleColStyle = () => {
+const singleCol = () => {
   return (
     <div>
       this is single col style
@@ -8,4 +8,4 @@ const singleColStyle = () => {
   )
 }
 
-export default singleColStyle
+export default singleCol;
