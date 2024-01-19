@@ -21,6 +21,9 @@ Before you begin, ensure you have the following installed:
 - [MongoDB](https://www.mongodb.com/)
 - [React.js](https://reactjs.org/)
 - [Express.js](https://expressjs.com/)
+- Redis
+- Docker
+- Apache kafka
 
 
 ## Getting Started
