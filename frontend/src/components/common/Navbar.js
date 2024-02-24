@@ -13,11 +13,11 @@ const navbar=[
     },
     {
         title:"ABOUT",
-        path:'/about'
+        path:"/about"
     },
     {
         title:"CONTACT",
-        path:'/'
+        path:'/contact'
     },
 ]
 
