@@ -1,3 +1,4 @@
+
 import React from 'react';
 import quizLogo from '../../assets/QuizFuse-removebg.png'
 // const shareData=[{title:"TWITER"},{title:"LINKDIN"},{title:"GITHUB"}]
@@ -51,8 +52,8 @@ import quizLogo from '../../assets/QuizFuse-removebg.png'
 const Footer = () => {
     return(
      
-<footer class="bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-red-900 via-violet-200 to-orange-500">
-  <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+<footer class="bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] object-bottom gap-y-4 from-red-900 via-violet-200 to-orange-500">
+  <div class="max-w-screen-xl  gap-y-4 px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
       <img src={quizLogo}  className="mr-5 h-6  sm:h-9" alt="logo" />
