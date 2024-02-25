@@ -21,7 +21,7 @@ const DownloadFile = ({index}) => {
 
     pdf.addImage(imageData, 'PNG', 0, 0,imgWidth,imgHeight);
 
-    pdf.save('my-pdf.pdf');
+    pdf.save('questions.pdf');
   };
   useEffect(()=>{
     generatePdf();

@@ -6,6 +6,7 @@ const initialSate={
     textinput:false,
     question:null,
     questionData:false,
+    result:null,
    
 }
 
@@ -28,10 +29,13 @@ const AiquestionSlice=createSlice({
         setQuestionsData(state,value){
             state.questionData=value.payload
         },
+        setResult(state,value){
+            state.result=value.payload
+        }
        
     }
 })
 
-export const {setPdfFile,setPresearch,setTextinput,setQ,setQuestionsData,setIndexes}=AiquestionSlice.actions
+export const {setPdfFile,setPresearch,setTextinput,setQ,setQuestionsData,setIndexes,setResult}=AiquestionSlice.actions
 
 export default AiquestionSlice.reducer;
