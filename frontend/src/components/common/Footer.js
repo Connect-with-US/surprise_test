@@ -1,7 +1,9 @@
+
 import React from 'react';
 import quizLogo from '../../assets/QuizFuse-removebg.png'
 const shareData=[{title:"TWITER"},{title:"LINKDIN"},{title:"GITHUB"}]
 const Footer = () => {
+
   return (
     <div className='m-12 mb-24 '>
     <div className='flex justify-end  to-90% h-72 w-full mx-auto border-t-4 border-l-4 rounded-3xl border-teal-400 text-black shadow-2xl bg-neutral-100'>
@@ -19,6 +21,8 @@ const Footer = () => {
                     <p key={index} className='text-lg font-semibold m-2'>{item.title}</p>
                 ))
             }
+
+
         </div>
         <div> 
         <p className='text-xl border-dashed border-b-4 w-full mb-8 font-semibold brightness-100 border-amber-950 '>FOLLOW</p>

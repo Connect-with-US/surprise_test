@@ -21,7 +21,10 @@ Before you begin, ensure you have the following installed:
 - [MongoDB](https://www.mongodb.com/)
 - [React.js](https://reactjs.org/)
 - [Express.js](https://expressjs.com/)
-- [ChatGPT 3.5 API Key](https://beta.openai.com/signup/)
+- Redis
+- Docker
+- Apache kafka
+
 
 ## Getting Started
 
