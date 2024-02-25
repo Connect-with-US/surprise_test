@@ -5,6 +5,8 @@ import hr from "../assets/hr.avif"
 import publish from "../assets/publish.avif"
 const About = () =>{
     return(
+
+
         <div class="w-[1200px] mt-14 grid gap-8 px-5 py-20 text-white  ">
             <div class="bg-cyan-50 px-14 pt-14 py-40 h-screen text-center  ">
                  <h1 class="text-6xl py-10 font-bold text-stone-950 text-center p-20  "> Create Multiple Choice Questions (MCQs) online from any text using AI.
@@ -84,6 +86,7 @@ const About = () =>{
                
 
           </div>
+
 
 
       

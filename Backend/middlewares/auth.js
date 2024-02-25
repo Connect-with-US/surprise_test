@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-
+const fs=require('fs');
+const pdf_parser=require("pdf-parse")
 exports.auth = (req,res, next) => {
     try{
         
@@ -87,5 +88,21 @@ exports.verifyPassword=(req,res,next)=>{
             message:"password did not contain all 8 characters",
             success:false,
         })
+    }
+}
+
+//get the pdf content
+
+exports.pdftext=async(req,res,next)=>{
+    try{
+        const pdfFile=req.files
+        console.log(pdfFile)
+        const readfile = fs.readFileSync(pdfFile.path, {encoding:"utf-8"}); 
+    console.log(readfile)
+    next();
+    res.send(readfile)
+    }catch(err){
+        console.log("something went wrong",err.message)
+        res.send("something went wrong")
     }
 }

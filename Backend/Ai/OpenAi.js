@@ -11,6 +11,9 @@ const openai = new OpenAI({
 
 exports.OpenAi=async  (req,res)=> {
      const {pram,num}=req.body
+    //  const thumbnail=req.files.file;
+    //  console.log("text heding is",pram);
+    //  console.log("this is pdf",thumbnail);
      
     try{
 
@@ -33,21 +36,11 @@ exports.OpenAi=async  (req,res)=> {
         })
         
         const result=completion.choices[0].message.content
-        const questions2 = result.questions;
-        console.log(questions2)
+      //create the db map
+    //   await  dbEntry(result)
+        // console.log(result)
         
-    // try{
-    // //    const ans=await  QuestionsSchema.insertMany(result)
-    //    const questionsToInsert = result.questions.map(question => ({ question }));
-    //    console.log(questionsToInsert)
-
-    // }catch(err){
-    //     console.log("something is issu while saving the data into mongodb")
-    //     res.status(400).json({
-    //         err:err,
-    //         success:false,
-    //     })
-    // }
+        
    
     res.send(result)
     
@@ -61,3 +54,18 @@ exports.OpenAi=async  (req,res)=> {
     }
 }
 
+
+// async function dbEntry(data){
+//     try{
+//     console.log(data.type)
+//         data.map((item,index)=>{
+//             const result=[]
+//             result.push(item.answer);
+
+//             console.log(result)
+//         })
+
+//     }catch(err){
+//         console.log(err.message)
+//     }
+// }

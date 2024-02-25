@@ -12,7 +12,11 @@ import DownloadFormate from "./components/download/DownloadFormate";
 
 import About from "./pages/About";
 import DownloadFile from "./components/download/DownloadFile";
+
+import Result from "./components/AIQuestion/Result";
+
 import  Contact  from "./pages/Contact";
+
 
 
 function App() {
@@ -31,6 +35,7 @@ function App() {
         <Route path="/login" element = {<Login  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/testpage" element = {<TestPage/>} />
+        <Route path="/result" element = {<Result/>} />
         <Route path="/questions" element = {<QuestionsStyle/>} />
         <Route path="/downloadformate" element = {<DownloadFormate/>} />
         <Route path="/download" element = {<DownloadFile/>} />
