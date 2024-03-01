@@ -1,13 +1,11 @@
 import React, { useRef } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import DoubleCol from './formates/DoubleCol';
-
+import SingleCol from './formates/SingleCol';
 import { useEffect } from 'react';
 
 const DownloadFile = ({index}) => {
   const componentRef = useRef(null);
-  
   
   const generatePdf = async () => {
     
@@ -29,9 +27,13 @@ const DownloadFile = ({index}) => {
   
   return (
     <div>
-    <div className=' text-center' ref={componentRef}>
+    <div ref={componentRef}>
     
-    <p className='text-center text-3xl text-black mx-auto p-6 w-[50%]'>this is me from download component</p>
+    <div className=' text-3xl text-black mx-auto  w-full m-6'>
+    {/* <QuestionStyle/> */}
+    <SingleCol/>
+    </div>
+    
     </div>
     <button onClick={generatePdf}></button>
     </div>

@@ -5,9 +5,7 @@ import hr from "../assets/hr.avif"
 import publish from "../assets/publish.avif"
 const About = () =>{
     return(
-
-
-        <div class="w-[1200px] mt-14 grid gap-8 px-5 py-20 text-white  ">
+        <div class="w-[1200px] mt-14 grid gap-8 px-5 py-20 text-white mx-auto">
             <div class="bg-cyan-50 px-14 pt-14 py-40 h-screen text-center  ">
                  <h1 class="text-6xl py-10 font-bold text-stone-950 text-center p-20  "> Create Multiple Choice Questions (MCQs) online from any text using AI.
                  </h1>
@@ -23,14 +21,12 @@ const About = () =>{
              <div class="flex flex-row pt-8 gap-20 px-14 ">
               <div >
                 <img src={signupImg} alt="photo" />
-                
               </div>
               <div >
               <img src={signupImg} alt="photo"  />
                
               </div>
-                 
-              
+
               </div>
                
               <div class="w-[1200px] my-14 mb-0 h-auto mx-auto  ">
@@ -38,35 +34,32 @@ const About = () =>{
               Who is it for?
             </h1>
             </div>
-              <div class="max-w-[1200px]  mx-auto flex-cols-3 gap-14  p-8  flex  </div>">
+              <div className=" flex flex-cols-3 justify-center gap-14 w-[1200px]  mx-auto ">
                 
-              <div class="w-full h-auto rounded-md shadow-lg hover:transform hover:scale-105 transition-transform duration-700 ease-in-out bg-slate-300 ring-2 ring-slate-500 hover:ring-4" >
-               
-                <img src={teach } alt="photo" />
-                
-               
-                <h3 class="py-4 px-8 text-3xl text-stone-950 font-bold text-center  ">
-                Teachers and Schools
-                </h3>  
-                <span class=' text-stone-950 flex  px-6 pb-6  '>
-                Teachers and Schools can use the QuizFuiz authoring tool to create worksheets easily in a few seconds. They can avoid repetitive questions chosen from a fixed question bank every year.
+              <div class="  w-full h-auto rounded-md shadow-sm hover:shadow-2xl   duration-300 bg-slate-300 ring-2 ring-slate-500 hover:ring-4">
+              <img src={teach} alt="photo" />
+              <h3 class="py-2 px-8 text-3xl text-stone-950 font-bold text-center">
+                  Teachers and Schools
+              </h3>  
+              <span class="text-stone-950 flex px-6 pb-4">
+                  Teachers and Schools can use the QuizFuiz authoring tool to create worksheets easily in a few seconds. They can avoid repetitive questions chosen from a fixed question bank every year.
+              </span>
+          </div>
 
-                </span>
-              </div>
 
-              <div class="w-full h-auto rounded-md shadow-lg hover:transform hover:scale-105 transition-transform duration-300 ease-in-out bg-slate-300 ring-2 ring-slate-500 hover:ring-4" >
+              <div class="w-full h-auto rounded-md shadow-sm hover:shadow-2xl transition-transform duration-300  bg-slate-300 ring-2 ring-slate-500 hover:ring-4" >
                
                 <img src={hr} alt="photo" />
                 
                <h3 class="py-4 px-8 text-3xl text-stone-950 font-bold text-center">
                HR Teams
                 </h3>  
-                <span class=' text-stone-950 flex  px-6 pb-6 '>
+                <span class=' text-stone-950 flex  px-6 pb-6'>
                 HR teams can use QuizFuiz  to create assessments from compliance documents. Every time there is a change in policies, assessments could be generated and given to employees to make sure that they have read and understood the new policies.
 
                 </span>
               </div>
-              <div class="w-full h-auto rounded-md shadow-lg hover:transform hover:scale-105 transition-transform duration-300 ease-in-out bg-slate-300 ring-2 ring-slate-500 hover:ring-4 " >
+              <div class="w-full h-auto rounded-md shadow-sm hover:shadow-2xl duration-300 ease-in-out bg-slate-300 ring-2 ring-slate-500 hover:ring-4 " >
                
                <img src={publish} alt="photo" />
                
@@ -77,34 +70,10 @@ const About = () =>{
                Textbook publishers and edtech companies can use QuizFuiz  instead of outsourcing the assessment creation process. They can have a small in-house team and save hugely on time and cost.
                 </span>
              </div>
-
-             
-              </div>
-                    
-                   
-             
-               
-
+           </div>
+           
           </div>
 
-
-
-      
-            
-
-            
-           
-
-
-          
-
-
-
-          
-            
-
-      
-       
        </div>
     )
 };

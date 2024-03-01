@@ -16,6 +16,7 @@ import DownloadFile from "./components/download/DownloadFile";
 import Result from "./components/AIQuestion/Result";
 
 import  Contact  from "./pages/Contact";
+import DownloadOrTestButton from "./components/download/DownloadOrTestButton";
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element = {<Login  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/testpage" element = {<TestPage/>} />
+        <Route path="/text_download_button" element = {<DownloadOrTestButton/>} />
         <Route path="/result" element = {<Result/>} />
         <Route path="/questions" element = {<QuestionsStyle/>} />
         <Route path="/downloadformate" element = {<DownloadFormate/>} />

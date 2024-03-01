@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 const AiquestionsFormateStyle = () => {
     const dispatch=useDispatch();
     const navigate=useNavigate();
+    const preai="Indian youth are the youngest compared to youth in other countries. How does this demographic advantage contribute to our country's economy"
     const {
       register,
       handleSubmit, } = useForm();
@@ -14,13 +15,18 @@ const AiquestionsFormateStyle = () => {
     const [childValue, setChildValue] = useState('');
     const [content, setContent] = useState(null);
     const handleChildValue = (formData) =>  setChildValue(formData);
+    const handleChildValue2=(preai)=>setChildValue(preai);
     const buttonData=[{lable:'Type or Paste text',
                       component:<TextareaComponent onChildValueChange={handleChildValue}/>
                       },
-                    {lable:'Upload pdf',
-                    component:<FileUploadComponent onChildValueFileChange={handleChildValue} />
-                  },
-                    {lable:'PreAisearch'}
+                  //   {lable:'Upload pdf',
+                  //   component:<FileUploadComponent onChildValueFileChange={handleChildValue} />
+                  // },
+                    {lable:'PreAisearch',
+                    // component:<TextareaComponent  onChildValueChange={handleChildValue2}/>
+                    component:<textarea type='text' name="message" value={preai}  className='w-full min-h-44  bg-zinc-100 justify-start px-2 focus:outline-none
+                    focus:ring-0  focus:border-gray-300 border-2 border-solid rounded-[8px] text-justify'/>
+                  }
                   ]
 
     const loadContent=(component)=>setContent(component)
@@ -30,7 +36,7 @@ const AiquestionsFormateStyle = () => {
       dispatch(OpenAi(childValue,num,navigate))
     }
 
-    const clickHandler=()=>navigate('/downloadformate') 
+    
 
   return (
     <div className=' w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center'>
@@ -40,21 +46,21 @@ const AiquestionsFormateStyle = () => {
       </div>
       <div className='flex flex-col w-full gap-y-4 mx-auto min-h-96 border bg-zinc-100 p-4 rounded'>
       <form onSubmit={ handleSubmit(submitHandler) }>
-      <div className=' felx flex-row justify-start gap-x-4'>
+      <div className=' felx felx-col'>
         <label className='text-start text-xl'>       
             <p> Enter A Title For Question Paper</p>
-            <input className=' w-[90%]  rounded h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-2'
+            <input className=' w-[50%]  rounded h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-2'
                 name='title' placeholder='enter your question title'/>
         </label>
         <label className='text-xl'> 
-            <input className='w-[10%] text-center rounded h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-2'
-                 placeholder='2' 
+            <input className='w-[50%] text-center rounded h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-2'
+                 placeholder='No of questions default 2 ' 
                   {...register("number")}
                 />
         </label>
 
         </div>
-        <div className=' grid grid-cols-3 w-full h-12  divide-x-2   justify-center items-center rounded font-semibold'>
+        <div className=' grid grid-cols-2 w-full h-12  divide-x-2   justify-center items-center rounded font-semibold'>
            {/* here i have to changes */}
 
            {
@@ -71,7 +77,7 @@ const AiquestionsFormateStyle = () => {
             </div>
             <div className=' flex gap-2'>
             <button type='submit'  className='w-full p-3 text-center font-semibold  text-black rounded  bg-emerald-400 hover:border-emerald-400 hover:border-[1px] hover:bg-neutral-50 duration-200'>Generates Questions</button>
-            <button className='w-full p-3 text-center font-semibold  text-black rounded  bg-emerald-400 hover:border-emerald-400 hover:border-[1px] hover:bg-neutral-50 duration-200' onClick={clickHandler}>Download Question</button></div>
+            </div>
             </div>
         </form>
       </div>

@@ -22,7 +22,7 @@ export function OpenAi(formData,num,navigate){
                 
                 dispatch(setQ(completion.data.questions))
                 dispatch(setQuestionsData(true)) 
-                dispatch(navigate("/testpage"))          
+                dispatch(navigate("/text_download_button"))          
             }
             
         }
