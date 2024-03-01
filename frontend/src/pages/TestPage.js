@@ -4,6 +4,7 @@ import AiquestionsFormateStyle from '../components/AIQuestion/AiquestionsFormate
 import QuestionsStyle from '../components/AIQuestion/QuestionsStyle';
 import TimeComp from '../components/AIQuestion/TimeComp';
 import DownloadFormate from '../components/download/DownloadFormate';
+import DownloadOrTestButton from '../components/download/DownloadOrTestButton';
 
 
 const TestPage = () => {
@@ -16,9 +17,9 @@ const TestPage = () => {
       <div className='flex flex-col  w-full mb-6 h-[288px] bg-gradient-to-r from-gray-800 via-indigo-950 to-gray-500 text-black text-center rounded-b-3xl mt-2'/>
       
       {
-        questionData ? (<QuestionsStyle/>): (<AiquestionsFormateStyle />)
+        questionData ? (<DownloadOrTestButton/>): (<AiquestionsFormateStyle />)
       }
-
+      {/* <AiquestionsFormateStyle /> */}
      {/* <DownloadFormate/> */}
       
       

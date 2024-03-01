@@ -15,28 +15,28 @@ const Footer = () => {
         >
         <div className='grid grid-cols-3 items-center w-9/12 mt-12 justify-items-center'>
         <div className=' '>
-            <p className='text-2xl border-dashed border-b-4 w-full mb-8 font-semibold brightness-100 border-amber-950 '>SHARE</p>
+            <p className='text-2xl  w-full mb-8 font-semibold brightness-100 border-amber-950 '>SHARE</p>
             {
                 shareData.map((item,index)=>(
-                    <p key={index} className='text-lg font-semibold m-2'>{item.title}</p>
+                    <p key={index} className='text-sm font-semibold m-2'>{item.title}</p>
                 ))
             }
 
 
         </div>
         <div> 
-        <p className='text-xl border-dashed border-b-4 w-full mb-8 font-semibold brightness-100 border-amber-950 '>FOLLOW</p>
+        <p className='text-xl  w-full mb-8 font-semibold brightness-100 border-amber-950 '>FOLLOW</p>
         {
                 shareData.map((item,index)=>(
-                    <p key={index} className='text-lg font-semibold m-2'>{item.title}</p>
+                    <p key={index} className='text-sm font-semibold m-2'>{item.title}</p>
                 ))
             }
         </div>
         <div>
-        <p className='text-2xl border-dashed border-b-4 w-full mb-8 font-semibold brightness-100 border-amber-950 '>LEGAL</p>
+        <p className='text-xl w-full mb-8 font-semibold brightness-100 border-amber-950 '>LEGAL</p>
         {
                 shareData.map((item,index)=>(
-                    <p key={index} className='text-lg font-semibold m-2'>{item.title}</p>
+                    <p key={index} className='text-sm font-semibold m-2'>{item.title}</p>
                 ))
             }
         </div>
