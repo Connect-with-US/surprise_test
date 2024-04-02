@@ -4,7 +4,7 @@ import { setLoading } from "../../central/slices/authslice";
 import {setQ} from "../../central/slices/Aiquestionslice"
 import {setQuestionsData,setResult} from "../../central/slices/Aiquestionslice"
 
-const BASE_URL="http://127.0.0.1:8000/api/v1.1.2";
+const BASE_URL="https://surprise-test-1.onrender.com/api/v1.1.2";
 
 export function OpenAi(formData,num,navigate){
     return async(dispatch)=>{
