@@ -5,7 +5,7 @@ import { apiConnector } from '../service/apisConnector';
 import { OpenAi } from '../service/Ai/OpenAi';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-const BASE_URL="http://localhost:8000/api/v1.1.2";
+const BASE_URL="https://surprise-test-1.onrender.com/api/v1.1.2";
 const TestData = () => {
     const[data,setData]=useState([]);
     const navigate=useNavigate()
