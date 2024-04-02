@@ -64,6 +64,6 @@
       "localhost",
       ".localhost"
     ],
-    "proxy": "https://surprise-test-1.onrender.com/"  
+    "proxy": "https://surprise-test-1.onrender.com/api/v1.1.2"  
   }
 }
