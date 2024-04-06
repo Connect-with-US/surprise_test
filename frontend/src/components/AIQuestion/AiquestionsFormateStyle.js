@@ -39,44 +39,45 @@ const AiquestionsFormateStyle = () => {
     
 
   return (
-    <div className=' w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center'>
+    <div className='w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center'>
       <div>
-        <h1 className='text-3xl font-bold m-1'>Generate Question Papers in minutes</h1>
-        <h3 className='text-xl font-semibold m-1'>Most Advanced Test Generator</h3>
+      <div className='flex'><h2 className='text-3xl font-bold m-1 ml-10 font-md' >Generate question Papers</h2>
+      <span className='text-3xl  m-1 font-edu-sa font-bold italic text-blue-600'>in seconds</span>
+      </div> 
+        <h3 className='text-xl font-semibold mb-4 gap-5 ModernEra rounded '> <span className='bg-violet-300' >Most Advanced Test Generator</span></h3>
       </div>
-      <div className='flex flex-col w-full gap-y-4 mx-auto min-h-96 border bg-zinc-100 p-4 rounded'>
+      <div className='bg-orange-300 flex flex-col w-full  mx-auto min-h-96  shadowHai p-6 rounded'>
       <form onSubmit={ handleSubmit(submitHandler) }>
-      <div className=' felx felx-col'>
-        <label className='text-start text-xl'>       
-            <p> Enter A Title For Question Paper</p>
-            <input className=' w-[50%]  rounded h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-2'
-                name='title' placeholder='enter your question title'/>
+
+        <label className=' Open Sans text-xl text-center '>       
+            <p> Put your Topic or Discription</p>
+            {/* <input className='shadow w-[50%]  rounded h-10 px-2 focus:outline-none focus:ring-0   border-2 border-solid mt-2'
+                name='title' placeholder='enter your question title'/> */}
         </label>
-        <label className='text-xl'> 
-            <input className='w-[50%] text-center rounded h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-2'
+        <label className='m-2 text-xl'> 
+            <input className=' w-[50%] text-center rounded h-10 px-2 focus:outline-none focus:ring-0 border-2 border-solid mt-2'
                  placeholder='No of questions default 2 ' 
                   {...register("number")}
                 />
         </label>
 
-        </div>
-        <div className=' grid grid-cols-2 w-full h-12  divide-x-2   justify-center items-center rounded font-semibold'>
+        <div className='grid grid-cols-2 w-full h-12  divide-x-2 justify-center items-center rounded font-semibold m-1'>
            {/* here i have to changes */}
 
            {
             buttonData.map((item,index)=>(
-             <button key={index} type='button' onClick={()=> loadContent(item.component)} className=' hover:shadow-2xl hover:scale-105  bg-neutral-50 h-full'> 
+             <button key={index} type='button' onClick={()=> loadContent(item.component)} className=' hover:shadow-2xl hover:scale-105  bg-neutral-50 h-full m-1 rounded-sm'> 
              {item.lable}</button>
             ))
            }
         </div>
         
         <div>
-            <div className='flex  justify-center items-center border-[2px] p-2 rounded min-h-48 border-neutral-50'>
+            <div className='flex justify-center items-center border-[2px] p-2 rounded min-h-48 border-neutral-50'>
                {content}
             </div>
-            <div className=' flex gap-2'>
-            <button type='submit'  className='w-full p-3 text-center font-semibold  text-black rounded  bg-emerald-400 hover:border-emerald-400 hover:border-[1px] hover:bg-neutral-50 duration-200'>Generates Questions</button>
+            <div className='flex gap-2 mx-auto w-full justify-center '>
+            <button type='submit' className='border bg-blue-300 p-2 px-3 rounded-lg hover:bg-neutral-50 m-2'>Generates Questions</button>
             </div>
             </div>
         </form>
@@ -121,12 +122,12 @@ const TextareaComponent = ({onChildValueChange}) => {
    onChange={handlechange}
    value={data} 
    multiple
-                className="text-sm text-stone-500
+                className="text-sm text-stone-500 
                         file:mr-5 file:py-1 file:px-3 file:border-none file:w-full
                         file:text-xs file:font-medium
                         file:bg-stone-50 file:text-stone-700
                         hover:file:cursor-pointer hover:file:bg-blue-50
-                        hover:file:text-blue-700"/>
+                        hover:file:text-blue-700 "/>
   );
 };
 
