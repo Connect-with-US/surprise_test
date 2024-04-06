@@ -1,7 +1,7 @@
 
 [
     {"title":"DSA",
-    "des":"This is for codeing test your skill as this level",
+    "des":"All sorting algorithm with it's Time complexity  ",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -10,7 +10,7 @@
  
     },
     {"title":"JS",
-    "des":"This is for codeing test your skill as this level",
+    "des":"what are the various Framework of Javascript and it's advantages",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -19,7 +19,7 @@
  
     },
     {"title":"C++",
-    "des":"This is for codeing test your skill as this level",
+    "des":"Opps concept in c++ with an examples",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -28,7 +28,7 @@
  
     },
     {"title":"Java",
-    "des":"This is for codeing test your skill as this level",
+    "des":"Java is a multithread language what are the benifits of its ",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -37,7 +37,7 @@
  
     },
     {"title":"Kotlin",
-    "des":"This is for codeing test your skill as this level",
+    "des":"Top 20 differences between in java and kotlin",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -46,7 +46,7 @@
  
     },
     {"title":"RUST",
-    "des":"This is for codeing test your skill as this level",
+    "des":"Why RUST is more secure in terms of  memory leack",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -55,7 +55,7 @@
  
     },
     {"title":"HTML",
-    "des":"This is for codeing test your skill as this level",
+    "des":"Top most questions about the HTML and its uses",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -64,7 +64,7 @@
  
     },
     {"title":"Python",
-    "des":"This is for codeing test your skill as this level",
+    "des":"what are the benifits of python in AI development",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
