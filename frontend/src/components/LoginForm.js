@@ -36,14 +36,15 @@ const LoginForm = () => {
     }
 
   return (
-  <div className='flex flex-col  items-center '>
+
+  <div className='flex flex-col w-full h-full bg-richblack-1007 items-center'>
   <div>
-    <form onSubmit={submitHandler} className='flex flex-col gap-y-2 border-2  p-4 w-96 items-center rounded text-black font-semibold text-[14px] '>
+    <form onSubmit={submitHandler} className='flex flex-col gap-y-6 p-12 w-96  items-center rounded text-black font-semibold text-[20px] '>
         <label>
             <p>
-                Email Address<sup>*</sup>
+                {/* Email Address<sup>*</sup> */}
             </p>
-            <input className='w-full rounded-lg h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-1'
+            <input className='newBorder'
                 required
                 type="email"
                 value = {formData.email}
@@ -55,11 +56,11 @@ const LoginForm = () => {
 
         <label>
             <p>
-                Password<sup>*</sup>
+                {/* Password<sup>*</sup> */}
             </p>
-            <div className='flex items-center w-full relative '>
+            <div className='flex items-center w-full relative gap-5'>
                 <div>
-                    <input className='  rounded-lg h-10 px-2 focus:outline-none focus:ring-0  focus:border-green-500 border-2 border-solid mt-1'
+                    <input className='newBorder'
                         required
                         type= {showPassword ? ("text") : ("password")}
                         value = {formData.password}
@@ -75,16 +76,16 @@ const LoginForm = () => {
                 </div>
             </div>
         </label>
-        <button className='text-sm font-semibold hover:bg-neutral-50 hover:shadow-xl bg-zinc-200 rounded-lg py-2 px-4 mx-auto text-black mt-1'>
+        <button className='text-sm font-semibold hover:bg-zinc-200 hover:shadow-xl bg-blue-200 rounded-lg py-2 px-3 mx-auto text-black mt-1'>
             LOG IN 
         </button>
     </form></div>
     <div className='flex flex-col  items-center'>
                 
-                <div className='text-zinc-500 text-[10px] font-normal m-1 '><p>if you dont have an account</p></div>
+                <div className='text-zinc-200 text-[10px] font-normal m-1.5 '><p>if you dont have an account</p></div>
             </div>
-            <Link to={"/signup"} className='border bg-zinc-200 p-1 px-3 rounded-lg hover:bg-neutral-50'>
-                <p>Sign Up</p>
+            <Link to={"/signup"} className='border bg-blue-200 p-1 px-3 rounded-lg hover:bg-zinc-200'>
+                <p class>Sign Up</p>
             </Link></div>
         
   )

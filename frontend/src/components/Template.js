@@ -1,5 +1,4 @@
 import React from 'react'
-import frameImage from "../assets/frame.png"
 import SignupForm from './SignupForm'
 import LoginForm from './LoginForm'
 import { useSelector } from 'react-redux';
@@ -9,17 +8,17 @@ const Template = ({title, desc1, desc2, image,formtype}) => {
 const loading=useSelector(state=>state.auth.loading)
 console.log("this is redux data ",loading)
   return (
-    <div className=' mt-32 bg-gray-100'>
+    <div className=' h-screen  bg-richblack-1007'>
         {
             loading? (<p className='text-black w-full h-screen items-center text-3xl font-bold'>Loading......</p>):
             (
-                <div className='grid grid-cols-2 justify-center w-full mb-2 mt-3 bg-white ml-1 mr-1'>
+                <div className='grid  justify-center items-center w-full mb-2  bg-richblack-1007 ml-1 mr-1'>
 
-        <div className=' text-black flex flex-col justify-center items-center p-4 text-sm w-full mx-auto rounded uppercase font-semibold text-[16px]'>
+        <div className='border-action text-black flex flex-col justify-center items-center p-4 text-sm w-full mx-auto rounded font-semibold border-4 text-[16px] mt-12'>
             <h1 className='bg-green-700 text-white rounded-lg w-11/12 mx-auto text-center p-2' >{title}</h1>
-            <p className='flex flex-col items-center gap-4 mb-4'>
-                <span>{desc1}</span>
-                <span>{desc2}</span>
+            <p className='flex flex-col items-center gap-4 mb-3 mt-3 text-[0.999rem] leading-[1.125rem]'>
+                <span className="font-edu-sa font-bold italic text-sky-100">{desc1}</span>
+                <span className="font-edu-sa font-bold italic text-sky-100">{desc2}</span>
             </p>
             {
                 formtype==="signup"? (<SignupForm/>):( <LoginForm/>)
@@ -36,13 +35,13 @@ console.log("this is redux data ",loading)
                 className='z-0 absolute overflow-hidden rounded-3xl w-full object-fill '
                 /> */}
 
-            <img src={image}
+            {/* <img src={image}
                 alt="Students"
                 width={558}
                 height={300}
                 loading="lazy"
                     className=' rounded-3xl  object-fill'
-                />    
+                />     */}
         </div>
 
     </div>
