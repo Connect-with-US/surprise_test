@@ -2,15 +2,22 @@ import React from 'react'
 import SignupForm from './SignupForm'
 import LoginForm from './LoginForm'
 import { useSelector } from 'react-redux';
+import RingLoader from "react-spinners/ClipLoader";
 
 const Template = ({title, desc1, desc2, image,formtype}) => {
 
 const loading=useSelector(state=>state.auth.loading)
 console.log("this is redux data ",loading)
   return (
-    <div className=' h-screen  bg-richblack-1007'>
+    <div className=' h-screen flex items-center justify-center  bg-richblack-1007'>
         {
-            loading? (<p className='text-black w-full h-screen items-center text-3xl font-bold'>Loading......</p>):
+            loading? <RingLoader
+                color={'#d6b036'}
+                loading={loading}
+                size={150}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />:
             (
                 <div className='grid  justify-center items-center w-full mb-2  bg-richblack-1007 ml-1 mr-1'>
 
