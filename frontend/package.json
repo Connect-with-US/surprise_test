@@ -3,6 +3,7 @@
   "homepage": "https://RoshanAnsy.github.io/quizfuse",
   "version": "0.1.0",
   "private": true,
+  "homepage":"./",
   "dependencies": {
     "@material-tailwind/react": "^2.1.9",
     "@reduxjs/toolkit": "^2.0.1",
