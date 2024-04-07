@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 const AiquestionsFormateStyle = () => {
     const dispatch=useDispatch();
     const navigate=useNavigate();
-    const preai="Indian youth are the youngest compared to youth in other countries. How does this demographic advantage contribute to our country's economy"
+    const preai="Indian youth are the youngest compared to youth in other countries. what is the top 10 advantage of it"
     const {
       register,
       handleSubmit, } = useForm();
@@ -32,7 +32,7 @@ const AiquestionsFormateStyle = () => {
     const loadContent=(component)=>setContent(component)
  
     const submitHandler=async(data)=>{
-      const num=data?data.number:2;
+      const num=data?data.number:5;
       dispatch(OpenAi(childValue,num,navigate))
     }
 
@@ -49,7 +49,7 @@ const AiquestionsFormateStyle = () => {
       <div className='bg-orange-300 flex flex-col w-full  mx-auto min-h-96  shadowHai p-6 rounded'>
       <form onSubmit={ handleSubmit(submitHandler) }>
 
-        <label className=' Open Sans text-xl text-center '>       
+        <label className=' Open Sans text-xl text-center font-semibold '>       
             <p> Put your Topic or Discription</p>
             {/* <input className='shadow w-[50%]  rounded h-10 px-2 focus:outline-none focus:ring-0   border-2 border-solid mt-2'
                 name='title' placeholder='enter your question title'/> */}

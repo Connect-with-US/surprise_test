@@ -21,13 +21,13 @@ const navbar=[
 ]
 
 const Navbar = () => {
-    const tailwind=' hover:border-b-indigo-950 hover:border-b-4 hover:bg-zinc-200 p-2 rounded'
+    const tailwind=' hover:border-b-orange-900 hover:border-b-4 hover:bg-zinc-200 p-2 rounded'
     const authdata=useSelector(state=>state.auth.token)
     console.log("from navbar auth data",authdata)
     
   return (
 
-    <div className='flex justify-center gap-x-24 z-11 h-16 w-[50%] mx-auto rounded-full bg-neutral-50 border font-semibold py-[2px] items-center  fixed  left-0 right-0 top-3 text-gray-500'>
+    <div className='flex justify-center gap-x-24 z-11 h-16 w-[50%] mx-auto rounded-full bg-neutral-50 border-2 font-semibold py-[2px] items-center  fixed  left-0 right-0 top-3 text-gray-500'>
         <Link to="/"> 
             <img src={logo}  alt="Logo" width={100} height={10} loading="lazy" className='p-2'/>
 

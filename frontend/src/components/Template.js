@@ -9,23 +9,23 @@ const Template = ({title, desc1, desc2, image,formtype}) => {
 const loading=useSelector(state=>state.auth.loading)
 console.log("this is redux data ",loading)
   return (
-    <div className=' h-screen flex items-center justify-center  bg-richblack-1007'>
+    <div className=' h-screen flex items-center justify-center  bg-richblack-1005'>
         {
             loading? <RingLoader
-                color={'#d6b036'}
+                color={'#403568'}
                 loading={loading}
-                size={150}
+                size={130}
                 aria-label="Loading Spinner"
                 data-testid="loader"
               />:
             (
-                <div className='grid  justify-center items-center w-full mb-2  bg-richblack-1007 ml-1 mr-1'>
+                <div className='grid  justify-center items-center w-full mb-2  bg-richblack-1005 ml-1 mr-1'>
 
         <div className='border-action text-black flex flex-col justify-center items-center p-4 text-sm w-full mx-auto rounded font-semibold border-4 text-[16px] mt-12'>
-            <h1 className='bg-green-700 text-white rounded-lg w-11/12 mx-auto text-center p-2' >{title}</h1>
+            <h1 className='bg-richblack-1002 text-white rounded-lg w-11/12 mx-auto text-center p-2' >{title}</h1>
             <p className='flex flex-col items-center gap-4 mb-3 mt-3 text-[0.999rem] leading-[1.125rem]'>
-                <span className="font-edu-sa font-bold italic text-sky-100">{desc1}</span>
-                <span className="font-edu-sa font-bold italic text-sky-100">{desc2}</span>
+                <span className="font-edu-sa font-bold italic text-black">{desc1}</span>
+                <span className="font-edu-sa font-bold italic text-black">{desc2}</span>
             </p>
             {
                 formtype==="signup"? (<SignupForm/>):( <LoginForm/>)
