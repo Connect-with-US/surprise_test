@@ -21,7 +21,10 @@ export function OpenAi(formData,num,navigate){
                 toast.success("you get your questions")
                 
                 dispatch(setQ(completion.data.questions))
-                // dispatch(setQuestionsData(true)) 
+
+
+                dispatch(setQuestionsData(true)) 
+
                 dispatch(navigate("/questions"))          
             }
             
@@ -58,7 +61,7 @@ export  function AnsValidate(userAnswers, questions,navigate){
 
         console.log(responceAns)
         
-        dispatch(setResult(responceAns?.data?.score));
+        dispatch(setResult(responceAns?.data));
         navigate("/result")
 
     }

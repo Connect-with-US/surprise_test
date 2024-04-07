@@ -5,13 +5,21 @@ import signup from "../assets/signup.png"
 import teach from "../assets/teacher.jpg" 
 import hr from "../assets/hr.avif"
 import publish from "../assets/publish.avif"
+import questions from "../assets/questions.png"
+import temp from "../assets/temp.png"
+import { useNavigate } from 'react-router-dom';
+
 const About = () =>{
+const navigate=useNavigate();
+const route=()=>{
+  navigate("/")
+}
     return(
         <div class="w-[1200px] mt-14 grid gap-8 px-5 py-20 text-white mx-auto">
-            <div class="bg-cyan-50 px-14 pt-14 py-40 h-screen text-center  ">
+            <div class=" px-14 pt-14 py-40 h-screen text-center  ">
                  <h1 class="text-6xl py-10 font-bold text-stone-950 text-center p-20  "> Create Multiple Choice Questions (MCQs) online from any text using AI.
                  </h1>
-                 <button class="w-28 h-12  pb-15 px-4  bg-blue-500 text-white rounded-lg hover:bg-blue-700 hover:text-gray-100 transition duration-100">Try it Free</button>
+                 <button onClick={()=>route()} class="w-28 h-12  pb-15 px-4  bg-blue-500 text-white rounded-lg hover:bg-blue-700 hover:text-gray-100 transition duration-100">Try it Free</button>
 
             </div>
 
@@ -22,10 +30,14 @@ const About = () =>{
              
              <div class="flex flex-row pt-8 gap-20 px-14 ">
               <div >
-                <img src={testPage} alt="photo" />
+
+                
+
+                <img src={questions} alt="photo" />
               </div>
               <div >
-              <img src={resultPage} alt="photo"  />
+              <img src={temp} alt="photo"  />
+
                
               </div>
 

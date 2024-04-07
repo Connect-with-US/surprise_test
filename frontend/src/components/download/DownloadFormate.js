@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import abc from "../../assets/abc.png"
 import template2 from "../../assets/template2.jpg"
-import template3 from "../../assets/template3.jpg"
+import template3 from "../../assets/temp.png"
 
 
 import DownloadFile from './DownloadFile'

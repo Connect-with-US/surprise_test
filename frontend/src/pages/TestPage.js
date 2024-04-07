@@ -13,11 +13,11 @@ const TestPage = () => {
     const questionData=useSelector(state=>state.AiQuestion.questionData)
 
   return (
-    <div className='mr-1 ml-1 bg-zinc-300  h-screen  '>
+    <div className='mr-1 ml-1 bg-zinc-300 '>
       {/* <div className='flex flex-col  w-full mb-6 h-[288px] bg-gradient-to-r from-gray-800 via-indigo-950 to-gray-500 text-black text-center rounded-b-3xl mt-2'/> */}
       
       {
-        questionData ? (<DownloadOrTestButton/>): (<AiquestionsFormateStyle />)
+        questionData ? (<QuestionsStyle/>): (<AiquestionsFormateStyle />)
       }
       {/* <AiquestionsFormateStyle /> */}
      {/* <DownloadFormate/> */}

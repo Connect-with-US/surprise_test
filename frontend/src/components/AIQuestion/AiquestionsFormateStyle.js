@@ -7,7 +7,10 @@ import { useForm } from 'react-hook-form';
 const AiquestionsFormateStyle = () => {
     const dispatch=useDispatch();
     const navigate=useNavigate();
-    const preai="Indian youth are the youngest compared to youth in other countries. what is the top 10 advantage of it"
+
+   
+    const preai="What are the top 20 language spoken in india"
+
     const {
       register,
       handleSubmit, } = useForm();
@@ -39,9 +42,9 @@ const AiquestionsFormateStyle = () => {
     
 
   return (
-    <div className='w-6/12  flex flex-col mx-auto  mb-4 justify-center text-center'>
+    <div className='w-6/12  flex flex-col mx-auto h-screen mb-4 justify-center text-center'>
       <div>
-      <div className='flex'><h2 className='text-3xl font-bold m-1 ml-10 font-md' >Generate question Papers</h2>
+      <div className='flex justify-center'><h2 className='text-3xl font-bold m-1  font-md' >Generate question Papers</h2>
       <span className='text-3xl  m-1 font-edu-sa font-bold italic text-blue-600'>in seconds</span>
       </div> 
         <h3 className='text-xl font-semibold mb-4 gap-5 ModernEra rounded '> <span className='bg-violet-300' >Most Advanced Test Generator</span></h3>
@@ -56,7 +59,8 @@ const AiquestionsFormateStyle = () => {
         </label>
         <label className='m-2 text-xl'> 
             <input className=' w-[50%] text-center rounded h-10 px-2 focus:outline-none focus:ring-0 border-2 border-solid mt-2'
-                 placeholder='No of questions default 2 ' 
+                 placeholder='No of questions default 5'
+                 type='number' 
                   {...register("number")}
                 />
         </label>
