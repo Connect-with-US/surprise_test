@@ -22,7 +22,7 @@ export function OpenAi(formData,num,navigate){
                 
                 dispatch(setQ(completion.data.questions))
                 dispatch(setQuestionsData(true)) 
-                dispatch(navigate("/text_download_button"))          
+                dispatch(navigate("/questions"))          
             }
             
         }
@@ -58,7 +58,7 @@ export  function AnsValidate(userAnswers, questions,navigate){
 
         console.log(responceAns)
         
-        dispatch(setResult(responceAns?.data?.score));
+        dispatch(setResult(responceAns?.data));
         navigate("/result")
 
     }
