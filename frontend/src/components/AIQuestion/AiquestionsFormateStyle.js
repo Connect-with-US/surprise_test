@@ -7,7 +7,10 @@ import { useForm } from 'react-hook-form';
 const AiquestionsFormateStyle = () => {
     const dispatch=useDispatch();
     const navigate=useNavigate();
+
+   
     const preai="What are the top 20 language spoken in india"
+
     const {
       register,
       handleSubmit, } = useForm();
@@ -49,7 +52,7 @@ const AiquestionsFormateStyle = () => {
       <div className='bg-orange-300 flex flex-col w-full  mx-auto min-h-96  shadowHai p-6 rounded'>
       <form onSubmit={ handleSubmit(submitHandler) }>
 
-        <label className=' Open Sans text-xl text-center '>       
+        <label className=' Open Sans text-xl text-center font-semibold '>       
             <p> Put your Topic or Discription</p>
             {/* <input className='shadow w-[50%]  rounded h-10 px-2 focus:outline-none focus:ring-0   border-2 border-solid mt-2'
                 name='title' placeholder='enter your question title'/> */}

@@ -35,7 +35,7 @@ const Home = () => {
        >
         <div className='flex flex-col h-full gap-8 mt-24 '>
         <p className='text-transparent bg-clip-text bg-black text-[34px] font-medium cursor-pointer font-sans font-roboto' > AI POWERED QUESTIONS GENERATOR </p>
-        <button onClick={handler}  className='text-sm font-bold bg-zinc-300 rounded-3xl p-2 w-[35%] mx-auto text-black hover:bg-neutral-50'>TAKE TEST</button>
+        <button onClick={handler}  className='text-sm font-bold bg-zinc-200 rounded-3xl p-2 w-[35%] mx-auto text-black hover:bg-neutral-50'>TAKE TEST</button>
         </div>
       </div>
       <div className='p-2'>

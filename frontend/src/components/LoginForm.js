@@ -37,7 +37,7 @@ const LoginForm = () => {
 
   return (
 
-  <div className='flex flex-col w-full h-full bg-richblack-1007 items-center'>
+  <div className='flex flex-col w-full h-full bg-richblack-1005 items-center'>
   <div>
     <form onSubmit={submitHandler} className='flex flex-col gap-y-6 p-12 w-96  items-center rounded text-black font-semibold text-[20px] '>
         <label>
@@ -82,7 +82,7 @@ const LoginForm = () => {
     </form></div>
     <div className='flex flex-col  items-center'>
                 
-                <div className='text-zinc-200 text-[10px] font-normal m-1.5 '><p>if you dont have an account</p></div>
+                <div className='text-black text-[15px] font-normal m-1.5 '><p>if you dont have an account</p></div>
             </div>
             <Link to={"/signup"} className='border bg-blue-200 p-1 px-3 rounded-lg hover:bg-zinc-200'>
                 <p class>Sign Up</p>
