@@ -1,7 +1,7 @@
 
 [
     {"title":"DSA",
-    "des":"All sorting algorithm with it's Time complexity  ",
+    "des":"Explain about the binary tree and avl tree",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -19,7 +19,7 @@
  
     },
     {"title":"C++",
-    "des":"Opps concept in c++ with an examples",
+    "des":"Explain oops concept of c++",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -28,7 +28,7 @@
  
     },
     {"title":"Java",
-    "des":"Java is a multithread language what are the benifits of its ",
+    "des":"what are various data types in java",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -37,7 +37,7 @@
  
     },
     {"title":"Kotlin",
-    "des":"Top 20 differences between in java and kotlin",
+    "des":"what are the top 20 differences between in java and kotlin",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -46,7 +46,7 @@
  
     },
     {"title":"RUST",
-    "des":"Why RUST is more secure in terms of  memory leack",
+    "des":"what is the advantages and disadvantages of Rust",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
@@ -64,7 +64,7 @@
  
     },
     {"title":"Python",
-    "des":"what are the benifits of python in AI development",
+    "des":"why most used python in Ai give us top 10 points",
     "status":"Active",
     "no_of_participant":50,
     "tage":"HTML",
