@@ -5,9 +5,10 @@ import { apiConnector } from '../service/apisConnector';
 import { OpenAi } from '../service/Ai/OpenAi';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import RingLoader from "react-spinners/ClipLoader";
 const BASE_URL="https://surprise-test-1.onrender.com/api/v1.1.2";
 const TestData = () => {
-    const[data,setData]=useState([]);
+    const[data,setData]=useState();
     const navigate=useNavigate()
     const dispatch=useDispatch();
     useEffect(()=>{
@@ -48,7 +49,14 @@ const TestData = () => {
               
             </div>
             </div>
-          ))):(<div className='flex justify-items-center w-[99%]  bg-red-500 text-xl text-black text-center font-semibold'><p>Loading...</p></div>)
+          ))):(<div className='flex justify-end'>
+          <RingLoader className='grid place-content-center'
+                color={'#d6b036'}
+                size={90}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+          </div>)
          
         }
       </div>
