@@ -1,5 +1,7 @@
 import React from "react";
-import signupImg from "../assets/signup.png"
+import testPage from "../assets/testPage.png"
+import resultPage from "../assets/resulT.png"
+import signup from "../assets/signup.png"
 import teach from "../assets/teacher.jpg" 
 import hr from "../assets/hr.avif"
 import publish from "../assets/publish.avif"
@@ -28,10 +30,14 @@ const route=()=>{
              
              <div class="flex flex-row pt-8 gap-20 px-14 ">
               <div >
+
+                
+
                 <img src={questions} alt="photo" />
               </div>
               <div >
               <img src={temp} alt="photo"  />
+
                
               </div>
 
