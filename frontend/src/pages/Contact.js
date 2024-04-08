@@ -60,7 +60,7 @@ const contact = () =>{
       <img class="h-36 w-36 rounded-full border-2 border-white mx-auto" src={Roshan} alt="Not Found"/>
          <div class="text-center" >
          <h1 class="text-lg font-medium text-center">Roshan Kumar</h1>
-         <p text-white-100 mx-auto>Hello Everyone we have built the website for you to have smooth experience</p>
+         <p text-white-100 mx-auto>Full stack Developer</p>
          </div>
     </div>
 
@@ -68,7 +68,7 @@ const contact = () =>{
       <img class="h-36 w-36 rounded-full  mx-auto  border-2 border-white" src={Shivam}alt="Not Found"/>
          <div class="text-center" >
          <h1 class="text-lg font-medium text-center">Shivam Kumar Gaurav</h1>
-         <p text-white-100 mx-auto>Hello Everyone we have built the website for you to have smooth experience</p>
+         <p text-white-100 mx-auto>Full stack Developer</p>
          </div> 
         
       
@@ -78,7 +78,7 @@ const contact = () =>{
       <img class="h-36 w-36 rounded-full border-2 border-white mx-auto"src={Nishant} alt="Not Found"/>
          <div class="text-center" >
          <h1 class="text-lg font-medium text-center">Nishant Kumar</h1>
-         <p text-white-100 mx-auto>Hello Everyone we have built the website for you to have smooth experience</p>
+         <p text-white-100 mx-auto>Full stack Developer</p>
          </div>
     </div>
 
@@ -86,17 +86,18 @@ const contact = () =>{
       <img class="h-36 w-36 rounded-full border-2 border-white mx-auto" src={Tanisha} alt="Not Found"/>
          <div class="text-center " >
          <h1 class="text-lg font-medium text-center">Tanisha Singh</h1>
-         <p text-white-100 mx-auto >Hello Everyone we have built the website for you to have smooth experience</p>
+         <p text-white-100 mx-auto >Full stack Developer</p>
          </div>
     </div>
 
 </div>
 
-<div class="text-center mt-[135px]  ">
+<div class="text-center mt-[135px]  mb-12 ">
   <h1 text-center class="text-center mt-[135px] text-3xl font-bold">Check Out Quiz Fuse Open Source Library</h1>
 
     <a href="https://github.com/Connect-with-US" target="blank">
-   <button class="bg-blue-500 py-5 mb-5 px-3 text- rounded-full mt-[40px] text-white hover:bg-blue-700">Github Library</ button>
+
+   <button class="bg-blue-500 py-5 px-10 text-xl rounded-full mt-[40px] text-white ">  Github Library</button>
 
   </a>
  </div> 
