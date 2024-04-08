@@ -14,7 +14,10 @@ console.log("this is redux data ",loading)
             loading? <RingLoader
                 color={'#403568'}
                 loading={loading}
-                size={130}
+
+                size={90}
+
+
                 aria-label="Loading Spinner"
                 data-testid="loader"
               />:
