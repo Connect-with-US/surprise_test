@@ -21,7 +21,10 @@ export function OpenAi(formData,num,navigate){
                 toast.success("you get your questions")
                 
                 dispatch(setQ(completion.data.questions))
+
+
                 dispatch(setQuestionsData(true)) 
+
                 dispatch(navigate("/questions"))          
             }
             
