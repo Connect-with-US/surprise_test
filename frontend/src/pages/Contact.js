@@ -97,7 +97,7 @@ const contact = () =>{
 
     <a href="https://github.com/Connect-with-US" target="blank">
 
-   <button class="bg-blue-500 py-5 px-10 text-xl rounded-full mt-[40px] text-white ">  Github Library</button>
+   <button class="bg-blue-500 hover:bg-blue-700 py-5 px-10 text-xl rounded-full mt-[40px] text-white ">  Github Library</button>
 
   </a>
  </div> 
